@@ -1,7 +1,7 @@
 {
-  "version": "2026.11.07.2",
-  "notes": "Annulla l'aggiornamento 2026.11.07.1, pubblicato per errore.",
+  "version": "2026.11.07.3",
+  "notes": "Nuova grafica: tabelle, pulsanti, campi, riassunto del preventivo e finestre piu puliti e ordinati.",
   "file": "index.html",
-  "sha256": "a8882edbed368423c972d9da99f06a4409c353db5672e78a5c6684b9898e32ee",
+  "sha256": "5de78896a3b8715a2042aee8600f7ae017def23a837c6b6208df6b817014b4e3",
   "needShell": 2
 }
