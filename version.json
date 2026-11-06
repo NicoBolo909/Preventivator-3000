@@ -1,7 +1,7 @@
 {
-  "version": "2026.11.06.4",
-  "notes": "Repository degli aggiornamenti precompilato: NicoBolo909/Preventivator-3000.",
+  "version": "2026.11.06.5",
+  "notes": "Dashboard: il grafico del materiale ora conta anche scarti e supporti, come il riquadro in alto.",
   "file": "index.html",
-  "sha256": "a204f2f468cdf1675b24bd6a4e5f0740d9062ec71cef0569735c7fd6da5b5b14",
+  "sha256": "64ad194aeb7a9012753c9c46a56608427dda1982ed6e3a79b306377bdb694bbe",
   "needShell": 2
 }

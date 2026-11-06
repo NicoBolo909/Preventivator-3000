@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=2026.11.06.4-->
+<!--APP_VER=2026.11.06.5-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -254,7 +254,7 @@ function calc(q){
   const c=mat+mac+ene+lab,u=c*(1+(+(f.margin??S.margin))/100);
   const mb=g/1000*(+m.costKg||0)*(1+(+m.markup||0)/100);br.mat+=mb*n;br.fail+=(mat-mb)*n;br.mac+=mac*n;br.ene+=ene*n;br.lab+=lab*n;
   cost+=c*n;price+=u*n;kg+=g*n/1000;hrs+=h*n;obj+=n;en+=ene*n;
-  rows.push({name:i.name,n,unit:u,tot:u*n,mat:m.name||'-',col:m.color||'',cn:m.colorName||'',mid:i.matId||'',mt:m.type||'',fin:i.finish||'',img:i.img||'',thm:!!i.thm,pr:p.name||'-',g:+i.g||0,h,min:+i.min||0,ene});
+  rows.push({name:i.name,n,unit:u,tot:u*n,mat:m.name||'-',col:m.color||'',cn:m.colorName||'',mid:i.matId||'',mt:m.type||'',fin:i.finish||'',img:i.img||'',thm:!!i.thm,pr:p.name||'-',g:+i.g||0,gw:g,h,min:+i.min||0,ene});
  });
  const ex=(q.extras||[]).reduce((a,id)=>a+(+find('extras',id)?.price||0),0),sub=price+ex,disc=sub*(+q.disc||0)/100,ship=+q.ship||0,net=sub-disc+ship,vat=net*(S.useVat?S.vat:0)/100,total=net+vat,dv=+q.depV||0,dep=Math.min(total,Math.max(0,q.depT=='pct'?total*dv/100:q.depT=='eur'?dv:0));
  return{br,cost,net,vat,total,profit:net-ship-cost,kg,hrs,obj,en,disc,ex,ship,price,dep,sub,rows};
@@ -356,7 +356,7 @@ function dash(){
  const qs=db.quotes.filter(q=>q.status=='Completato'&&inR(q.date));
  const T={o:0,rev:0,pr:0,obj:0,kg:0,h:0},byM={},byP={},cm={};
  qs.forEach(q=>{const r=q.res||calc(q);T.o++;T.rev+=r.net;T.pr+=r.profit;T.obj+=r.obj;T.kg+=r.kg;T.h+=r.hrs;
-  calc(q).rows.forEach(w=>{const lb=w.mat+(w.cn?' · '+w.cn:'');if(w.col)cm[lb]=w.col;byM[lb]=(byM[lb]||0)+w.g*w.n/1000;byP[w.pr]=(byP[w.pr]||0)+w.h*w.n});});
+  calc(q).rows.forEach(w=>{const lb=w.mat+(w.cn?' · '+w.cn:'');if(w.col)cm[lb]=w.col;byM[lb]=(byM[lb]||0)+w.gw*w.n/1000;byP[w.pr]=(byP[w.pr]||0)+w.h*w.n});});
  const hb=(o,fn,c)=>{const k=Object.entries(o).sort((a,b)=>b[1]-a[1]),mx=k[0]?.[1]||1;
   return k.length?k.map(([n,v])=>`<div class=hb><span class=n>${esc(n)}</span><i style="width:${v/mx*50}%;${c&&c(n)?'background:'+c(n):''}"></i><em>${fn(v)}</em></div>`).join(''):'<p class=mu>Nessun dato nel periodo selezionato.</p>'};
  const months=[];for(let i=11;i>=0;i--){const d=new Date(y,mo-i,1);months.push([d.getFullYear(),d.getMonth()])}
