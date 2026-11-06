@@ -16,6 +16,7 @@
 - **Import da Bambu Studio:** stampanti, materiali e profili di stampa.
 - **PDF:** preventivo per il cliente e ordine di lavorazione.
 - **Dashboard:** ordini, fatturato, profitto, materiale e ore di stampa.
+- **Italiano e inglese:** lingua del programma e dei PDF a scelta.
 - **Autosave e aggiornamenti:** salvataggio automatico quando il cliente è selezionato e aggiornamenti all'avvio.
 
 ## Il preventivo

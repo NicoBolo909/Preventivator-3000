@@ -1,7 +1,7 @@
 {
-  "version": "2026.11.06.5",
-  "notes": "Dashboard: il grafico del materiale ora conta anche scarti e supporti, come il riquadro in alto.",
+  "version": "2026.11.06.6",
+  "notes": "Ora puoi scegliere la lingua del programma e dei PDF: italiano o inglese. Trovi la scelta in Impostazioni.",
   "file": "index.html",
-  "sha256": "64ad194aeb7a9012753c9c46a56608427dda1982ed6e3a79b306377bdb694bbe",
+  "sha256": "197d16cb3c7e8a2fae24e4936b457f5f91255c0cc95b7c2f587a57f5740e538e",
   "needShell": 2
 }
