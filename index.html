@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=2026.11.06.6-->
+<!--APP_VER=2026.11.06.7-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -143,6 +143,7 @@ nav .th{font-size:12.5px;color:#8f98a8;justify-content:center}
 #drw .g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}#drw label{display:block;margin-bottom:10px}
 .crow{display:flex;gap:8px;align-items:center}.crow input[type=color]{width:54px;flex:none}
 .mtab .pb{width:90px}
+.mtab tr.mgh td{background:rgba(128,128,128,.1);padding:8px 12px;cursor:pointer;user-select:none;font-size:13px}.mtab tr.mgh td>*{vertical-align:middle}.mgi{display:inline-block;width:18px;color:var(--mu)}.mgc{display:inline-block;margin:0 10px;min-width:20px;padding:0 7px;text-align:center;font-size:11.5px;line-height:18px;border-radius:99px;background:rgba(128,128,128,.22)}
 /* barra laterale a tema + chiudibile */
 :root{--sidetx:#161a20;--sidemu:#586274;--sidehv:rgba(14,143,126,.12);--sidebd:#dcdfd8;--acx:#fff;--side:#ffffff}
 @media(prefers-color-scheme:dark){:root:not([data-theme]){--side:#171b22;--sidetx:#e9ecf1;--sidemu:#9aa3b2;--sidehv:rgba(52,211,184,.13);--sidebd:#232a37;--acx:#05231e}}
@@ -239,7 +240,7 @@ const I18N_EN={
 'Costo materiale':'Material cost','Energia':'Energy','Ammortamento macchina':'Machine depreciation','Costo fallimento':'Failure cost','Manodopera':'Labor',
 'Automatico':'Automatic','Chiaro':'Light','Scuro':'Dark','Oceano':'Ocean','Grafite':'Graphite','Tramonto':'Sunset','Viola':'Violet','Foresta':'Forest','Sabbia':'Sand','Rosa':'Rose',
 'Aggiungi':'Add','Modifica':'Edit','Elimina':'Delete','Duplica':'Duplicate','Salva':'Save','Annulla':'Cancel','Chiudi':'Close','Apri':'Open','Ordine':'Work order','PDF':'PDF','Nessun elemento. Aggiungine uno per iniziare.':'No items yet. Add one to get started.',
-'Senza nome':'Unnamed','Seleziona tutti':'Select all','Nome materiale':'Material name','Prezzo /kg':'Price /kg','Magazzino':'Stock','Alert':'Alert','Azioni':'Actions','Nessun materiale. Creane uno o importalo da Bambu Studio.':'No materials yet. Create one or import it from Bambu Studio.','Precedente':'Previous','Successiva':'Next','Righe':'Rows',
+'Senza nome':'Unnamed','Espandi o comprimi il gruppo':'Expand or collapse the group','Seleziona tutti':'Select all','Nome materiale':'Material name','Prezzo /kg':'Price /kg','Magazzino':'Stock','Alert':'Alert','Azioni':'Actions','Nessun materiale. Creane uno o importalo da Bambu Studio.':'No materials yet. Create one or import it from Bambu Studio.','Precedente':'Previous','Successiva':'Next','Righe':'Rows',
 'Crea o modifica i materiali di stampa':'Create or edit your print materials','Cerca materiale per nome':'Search materials by name','Tutti i tipi':'All types','Importa materiali ▾':'Import materials ▾','Da Bambu Studio':'From Bambu Studio','Da cartella…':'From folder…','Da file…':'From file…','Nuovo materiale':'New material','Aggiorna materiale':'Update material','Salva materiale':'Save material',
 'Importa da Bambu Studio':'Import from Bambu Studio','Caricamento…':'Loading…','Codice prodotto/colore':'Product/color code','Es. PLA-MATTE-BLK-042':'E.g. PLA-MATTE-BLK-042','Tipo (PLA, PETG…)':'Type (PLA, PETG…)','Colore materiale':'Material color','Nessun colore':'No color','Costi e scorte':'Costs and stock','Peso specifico g/cm³':'Density g/cm³','Prezzo €/kg':'Price €/kg','Markup %':'Markup %','Fallimento %':'Failure %','Peso bobina (g)':'Spool weight (g)','Rimanente (g)':'Remaining (g)','Soglia scorte (g)':'Low-stock threshold (g)','Avvisa sotto questa quantità':'Alert below this amount','Registro movimenti':'Stock log','Materiale rimanente':'Remaining material','Si scala da solo quando un preventivo passa a «Completato».':'Deducted automatically when a quote is set to “Completed”.','Bobina nuova (ripristina rimanente)':'New spool (reset remaining)','Acquisto e fornitore':'Purchase and supplier','Link di acquisto':'Purchase link','https://esempio.it/materiale':'https://example.com/material',
 'Scegli un filamento…':'Choose a filament…','(tuo)':'(yours)','Nessun filamento trovato in Bambu Studio':'No filaments found in Bambu Studio','Eliminare questo elemento?':'Delete this item?',
@@ -377,14 +378,20 @@ function list(k){if(k=='materials')return matList();const e=E[k];
  let h=`<div class=bar><h2>${e.t}</h2><span>${bamBt(k)}<button class=pr onclick="edit('${k}')">Aggiungi</button></span></div>${bamHt(k)}<table><tr>${e.f.map(f=>`<th>${f[1]}`).join('')}<th></tr>`;
  db[k].forEach(r=>h+=`<tr>${e.f.map(f=>`<td data-nt>${f[2]=='color'?sw(r[f[0]]||'#808080')+' '+esc(r[f[0]]||''):esc(r[f[0]])}`).join('')}<td class=r><button onclick="edit('${k}','${r.id}')">Modifica</button> <button onclick="del('${k}','${r.id}')">Elimina</button></tr>`);
  return h+'</table>'+(db[k].length?'':`<p class=mu>Nessun elemento. Aggiungine uno per iniziare.</p>`);}
-const MS={q:'',type:'',pp:10,pg:1,sel:new Set(),imp:false};
-function matRows(){const q=MS.q.toLowerCase(),ls=db.materials.filter(m=>(!MS.type||m.type==MS.type)&&(!q||[m.name,m.type,m.colorName,m.code].join(' ').toLowerCase().includes(q))),pp=+MS.pp||10,np=Math.max(1,Math.ceil(ls.length/pp));MS.pg=Math.min(Math.max(1,MS.pg),np);
- const pg=ls.slice((MS.pg-1)*pp,MS.pg*pp);
+const MS={q:'',type:'',pp:10,pg:1,sel:new Set(),imp:false,col:new Set()};
+function mgT(g){MS.col.has(g)?MS.col.delete(g):MS.col.add(g);matRef()}
+function matRows(){const q=MS.q.toLowerCase(),ls=db.materials.filter(m=>(!MS.type||m.type==MS.type)&&(!q||[m.name,m.type,m.colorName,m.code].join(' ').toLowerCase().includes(q)));
+ const grp=new Map();ls.forEach(m=>{const k=(m.name||'').trim();if(!grp.has(k))grp.set(k,[]);grp.get(k).push(m)});
+ const units=[];[...grp.keys()].sort((a,b)=>a.localeCompare(b,LOC,{sensitivity:'base'})).forEach(k=>{const a=grp.get(k).sort((x,y)=>(x.colorName||'').localeCompare(y.colorName||'',LOC,{sensitivity:'base'}));if(MS.col.has(k))units.push({k});else a.forEach(m=>units.push({k,m}))});
+ const pp=+MS.pp||10,np=Math.max(1,Math.ceil(units.length/pp));MS.pg=Math.min(Math.max(1,MS.pg),np);
+ const pg=units.slice((MS.pg-1)*pp,MS.pg*pp);
+ const ghd=k=>{const a=grp.get(k),tot=a.reduce((s,m)=>s+(+m.stock||0),0),c=MS.col.has(k);return `<tr class=mgh onclick="mgT(this.dataset.g)" data-g="${esc(k)}" title="Espandi o comprimi il gruppo"><td colspan=6><span class=mgi>${c?'▸':'▾'}</span><b ${k?'data-nt':''}>${esc(k||'Senza nome')}</b><span class=mgc>${a.length}</span><span class=mu>${Math.round(tot)} g</span></td></tr>`};
+ const mkBody=()=>{let lastG=null;return pg.map(u=>{const h=u.k!==lastG?ghd(u.k):'';lastG=u.k;return h+(u.m?row(u.m):'')}).join('')};
  const row=m=>{const cap=+m.cap>0?+m.cap:1000,st=+m.stock||0,pc=Math.max(0,Math.min(100,st/cap*100)),col=st<=0?'#d33':(+m.alert>0&&st<=+m.alert)?'#e0a100':'var(--ac)';
-  return `<tr><td style="width:34px"><input type=checkbox style="width:auto" ${MS.sel.has(m.id)?'checked':''} onchange="msel('${m.id}',this.checked)"><td><div class=nmc><span class=sw style="background:${esc(m.color||'#808080')}"></span>${m.type?`<span class=bdg>${esc(m.type)}</span>`:''}<div><b>${esc(m.name||'Senza nome')}</b>${m.colorName?`<div class=mu style="font-size:12px">${esc(m.colorName)}</div>`:''}</div></div>
+  return `<tr><td style="width:34px"><input type=checkbox style="width:auto" ${MS.sel.has(m.id)?'checked':''} onchange="msel('${m.id}',this.checked)"><td><div class=nmc><span class=sw style="background:${esc(m.color||'#808080')}"></span>${m.type?`<span class=bdg>${esc(m.type)}</span>`:''}<div><b ${m.name?'data-nt':''}>${esc(m.name||'Senza nome')}</b>${m.colorName||m.code||m.color?`<div class=mu data-nt style="font-size:12px">${[m.colorName,m.code,m.color].filter(Boolean).map(esc).join(' · ')}</div>`:''}</div></div>
   <td>${eur(m.costKg)}/kg<td><b>${Math.round(st)} g</b> <span class=mu>/ ${Math.round(cap)} g</span><div class=pb><i style="width:${pc}%;background:${col}"></i></div>
   <td>${+m.alert>0?Math.round(m.alert)+' g':'<span class=mu>-</span>'}<td style="white-space:nowrap;text-align:right"><button class=ib title="Modifica" onclick="edit('materials','${m.id}')">✎</button> <button class=ib title="Duplica" onclick="dupM('${m.id}')">⧉</button> <button class="ib dl" title="Elimina" onclick="del('materials','${m.id}')">✕</button></tr>`};
- return `<table class=mtab><thead><tr><th><input type=checkbox style="width:auto" onchange="mselAll(this.checked)" title="Seleziona tutti"><th>Nome materiale<th>Prezzo /kg<th>Magazzino<th>Alert<th style="text-align:right">Azioni</tr></thead><tbody>${pg.map(row).join('')||'<tr><td colspan=6 class=mu style="padding:18px">Nessun materiale. Creane uno o importalo da Bambu Studio.</tr>'}</tbody></table>
+ return `<table class=mtab><thead><tr><th><input type=checkbox style="width:auto" onchange="mselAll(this.checked)" title="Seleziona tutti"><th>Nome materiale<th>Prezzo /kg<th>Magazzino<th>Alert<th style="text-align:right">Azioni</tr></thead><tbody>${mkBody()||'<tr><td colspan=6 class=mu style="padding:18px">Nessun materiale. Creane uno o importalo da Bambu Studio.</tr>'}</tbody></table>
  <div class=pgn style="margin-top:10px"><span class=mu>Pagina ${MS.pg}/${np}</span><button ${MS.pg<=1?'disabled':''} onclick="MS.pg--;matRef()">Precedente</button><button ${MS.pg>=np?'disabled':''} onclick="MS.pg++;matRef()">Successiva</button><span style="flex:1"></span><label style="display:flex;gap:8px;align-items:center;margin:0">Righe<select style="width:auto" onchange="MS.pp=+this.value;MS.pg=1;matRef()">${[5,10,25,50,100].map(n=>`<option ${n==MS.pp?'selected':''}>${n}`).join('')}</select></label></div>`}
 function msel(id,v){v?MS.sel.add(id):MS.sel.delete(id);selUi()}
 function mselAll(v){db.materials.forEach(m=>v?MS.sel.add(m.id):MS.sel.delete(m.id));matRef()}
