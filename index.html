@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=2026.11.06.3-->
+<!--APP_VER=2026.11.06.4-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -887,6 +887,7 @@ function otaToast(r){let t=document.getElementById('otat');if(t)t.remove();t=doc
 async function otaReset(){if(!confirm('Tornare alla versione inclusa nell\'app? Al prossimo avvio potrebbe riscaricare l\'ultima.'))return;await api.otaReset();api.otaRestart()}
 async function otaClearTok(){await api.otaSet({clearToken:true});otaSettings()}
 if(window.api&&api.onOta)api.onOta(r=>otaToast(r));
+if(window.api&&api.otaInfo)api.otaInfo().then(i=>{if(!i.repo)api.otaSet({repo:'NicoBolo909/Preventivator-3000'})}).catch(()=>{});
 const PW=[[/a1 mini/i,70],[/\ba1\b/i,90],[/p1p/i,95],[/p1s/i,105],[/x1e/i,150],[/x1/i,120],[/h2d/i,150],[/h2s/i,130],[/p2s/i,110]];
 const pwEst=n=>{for(const x of PW)if(x[0].test(n))return x[1];return ''};
 async function printImp(){
