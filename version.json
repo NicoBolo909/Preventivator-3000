@@ -1,7 +1,7 @@
 {
-  "version": "2026.11.07.1",
-  "notes": "Importazione filamenti: mostra quanti ne ha trovati in Bambu Studio.",
+  "version": "2026.11.07.2",
+  "notes": "Annulla l'aggiornamento 2026.11.07.1, pubblicato per errore.",
   "file": "index.html",
-  "sha256": "2cae2f1adcecd44bf386e77d04d6269e0f3a5a5360b2b97b6d6a48a7684bb8b8",
+  "sha256": "a8882edbed368423c972d9da99f06a4409c353db5672e78a5c6684b9898e32ee",
   "needShell": 2
 }
