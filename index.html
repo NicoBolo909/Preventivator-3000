@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=2026.11.06.1-->
+<!--APP_VER=2026.11.06.2-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -876,7 +876,7 @@ async function otaSave(chk){await api.otaSet({repo:$('#ot_r').value,branch:$('#o
  if(!chk){$('#ot_s').textContent='Impostazioni salvate.';otaSettings();return}
  $('#ot_s').textContent='Controllo in corso…';const r=await api.otaCheck();otaShow(r)}
 function otaShow(r){const s=$('#ot_s');
- if(r.state=='ok'){if(s)s.textContent='Sei aggiornato (versione '+r.current+').'}
+ if(r.state=='ok'){if(s)s.textContent='Ultima versione installata ('+r.current+').'}
  else if(r.state=='ready'){if(s)s.textContent='Aggiornamento '+r.latest+' scaricato.';otaToast(r)}
  else if(r.state=='full'){if(s)s.textContent='La versione '+r.latest+' richiede l\'archivio completo (aggiornamento manuale con Aggiorna).'}
  else if(s)s.textContent='Errore: '+r.error}
