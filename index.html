@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=2026.11.06.2-->
+<!--APP_VER=2026.11.06.3-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -239,7 +239,7 @@ const opt=(k,sel,none)=>(none?`<option value="">${none}`:'')+db[k].map(x=>`<opti
 
 const E={
  materials:{t:'Materiali',f:[['name','Nome','text'],['type','Tipo','text'],['code','Codice','text'],['costKg','Costo','number'],['density','Densità','number'],['markup','Markup','number'],['fail','Fallimento','number'],['stock','Rimanente','number'],['cap','Bobina','number'],['alert','Soglia','number'],['color','Colore','text'],['colorName','Nome colore','text'],['supplier','Fornitore','text'],['link','Link','text']]},
- printers:{t:'Stampanti',f:[['name','Nome','text'],['watts','Consumo in stampa (W)','number'],['preheatWh','Energia preriscaldo (Wh)','number'],['costHour','Costo macchina €/h','number']]},
+ printers:{t:'Stampanti',f:[['name','Nome','text'],['price','Prezzo stampante (€)','number'],['lifeH','Vita utile (ore di stampa)','number'],['costHour','Costo macchina €/h (prezzo ÷ vita utile)','number'],['watts','Consumo in stampa (W)','number'],['preheatWh','Energia preriscaldo (Wh)','number']]},
  clients:{t:'Clienti',f:[['name','Nome','text'],['email','Email','text'],['phone','Telefono','text'],['notes','Note','text']]},
  profiles:{t:'Profili stampa',f:[['name','Nome','text'],['waste','Scarto e supporti %','number'],['margin','Margine %','number'],['timeX','Moltiplicatore tempo','number'],['layer','Altezza layer (mm)','number']]},
  extras:{t:'Extra',f:[['name','Nome','text'],['price','Prezzo €','number']]}
@@ -270,7 +270,7 @@ profiles:'<path d="M4 6h10M18 6h2M4 12h4M12 12h8M4 18h12"/><circle cx="16" cy="6
 extras:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/>',
 set:'<circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1L7 17M17 7l2.1-2.1"/>'};
 const ic=k=>`<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${IC[k]||''}</svg>`;
-const bamBt=k=>k=='materials'||k=='profiles'?`<button onclick="bambuImp()">Importa da Bambu Studio</button> <button onclick="$('#bd').click()">Da cartella…</button><input id=bf type=file multiple accept=".json,.bbscfg,.bbsflmt" hidden onchange="bambuFiles(this)"><input id=bd type=file webkitdirectory hidden onchange="bambuFiles(this)"> `:'';
+const bamBt=k=>k=='printers'&&window.api&&api.presets?`<button onclick="printImp()">Importa da Bambu Studio</button> `:k=='materials'||k=='profiles'?`<button onclick="bambuImp()">Importa da Bambu Studio</button> <button onclick="$('#bd').click()">Da cartella…</button><input id=bf type=file multiple accept=".json,.bbscfg,.bbsflmt" hidden onchange="bambuFiles(this)"><input id=bd type=file webkitdirectory hidden onchange="bambuFiles(this)"> `:'';
 const bamHt=k=>k=='materials'?`<p class=mu style="margin-top:-6px">I preset di Bambu Studio sono in %APPDATA%\\BambuStudio\\user. Nel programma .exe l'importazione è automatica.</p>`:'';
 const PAL=['#0e8f7e','#4c7cf3','#e0a100','#c0569e','#e2683c','#7a6bd6','#3aa0c8','#8aa33a'],MN=['Gen','Feb','Mar','Apr','Mag','Giu','Lug','Ago','Set','Ott','Nov','Dic'];
 function dn(o,fn,c){const k=Object.entries(o).sort((a,b)=>b[1]-a[1]),t=k.reduce((s,x)=>s+x[1],0);
@@ -329,9 +329,10 @@ function matDrw(id){const r=find('materials',id)||{},v=k=>esc(r[k]??''),n=(k,l,p
  <h4>Acquisto e fornitore</h4>${t('supplier','Fornitore')}${t('link','Link di acquisto','https://esempio.it/materiale')}</div>
  <footer><button onclick=closeDrw()>Annulla</button><button class=go onclick="saveE('materials','${id||''}')">${id?'Aggiorna materiale':'Salva materiale'}</button></footer></aside>`);colSync();if(!id&&window.api&&api.presets)bsLoad();}
 function dupM(id){const o=structuredClone(find('materials',id));o.id=uid();o.stock=o.cap||1000;db.materials.push(o);save();edit('materials',o.id);}
-function edit(k,id){if(k=='materials')return matDrw(id);const e=E[k],r=find(k,id)||{};
+function edit(k,id){if(k=='materials')return matDrw(id);const e=E[k],r=find(k,id)||{};$('#dlg').style.width='';
  $('#dlg').innerHTML=`<h3>${e.t}</h3>`+(k=='materials'&&!id&&window.api&&api.presets?`<label>Importa da Bambu Studio<select id=bsel onchange="bsPick(this.value)"><option value="">Caricamento…</option></select></label>`:'')+e.f.map(f=>`<label>${f[1]}<input id="f_${f[0]}" type="${f[2]}" step="any" value="${esc(r[f[0]]??(f[2]=='color'?'#0e8f7e':''))}"></label>`).join('')+`<div class=bar><button onclick="$('#dlg').close()">Annulla</button><button class=pr onclick="saveE('${k}','${id||''}')">Salva</button></div>`;
- $('#dlg').showModal();if(k=='materials'&&!id&&window.api&&api.presets)bsLoad();}
+ $('#dlg').showModal();if(k=='materials'&&!id&&window.api&&api.presets)bsLoad();
+ if(k=='printers')['f_price','f_lifeH'].forEach(i=>{$('#'+i).oninput=()=>{const p=+$('#f_price').value,l=+$('#f_lifeH').value;if(p>0&&l>0)$('#f_costHour').value=(p/l).toFixed(3)}});}
 async function bsLoad(){
  const s=$('#bsel');let l=[];
  try{l=((await api.presets()).filament||[]).filter(x=>x.src=='user'||!/nozzle/i.test(x.name))}catch(e){}
@@ -886,6 +887,20 @@ function otaToast(r){let t=document.getElementById('otat');if(t)t.remove();t=doc
 async function otaReset(){if(!confirm('Tornare alla versione inclusa nell\'app? Al prossimo avvio potrebbe riscaricare l\'ultima.'))return;await api.otaReset();api.otaRestart()}
 async function otaClearTok(){await api.otaSet({clearToken:true});otaSettings()}
 if(window.api&&api.onOta)api.onOta(r=>otaToast(r));
+const PW=[[/a1 mini/i,70],[/\ba1\b/i,90],[/p1p/i,95],[/p1s/i,105],[/x1e/i,150],[/x1/i,120],[/h2d/i,150],[/h2s/i,130],[/p2s/i,110]];
+const pwEst=n=>{for(const x of PW)if(x[0].test(n))return x[1];return ''};
+async function printImp(){
+ let pr={};try{pr=await api.presets()}catch(e){}
+ const have=new Set(db.printers.map(x=>x.name.toLowerCase())),seen=new Set(),L=[];
+ (pr.machine||[]).forEach(m=>{const n=m.name.replace(/\s*\d*\.?\d+\s*mm\s*nozzle\s*$/i,'').replace(/\s*\d*\.?\d+\s*nozzle\s*$/i,'').trim();if(n&&!seen.has(n.toLowerCase())){seen.add(n.toLowerCase());L.push(n)}});
+ const inp=(i,k,v,w)=>`<input id="pi_${k}${i}" type=number step=any value="${v}" style="width:${w}px" oninput="printCalc(${i})">`;
+ $('#dlg').innerHTML=`<h3>Importa stampanti da Bambu Studio</h3><p class=mu>${L.length?`Trovate ${L.length} stampanti. Spunta quelle da importare e inserisci prezzo e vita utile: il costo €/h si calcola da solo. Consumo e preriscaldo sono stime, correggile con una misura reale se puoi.`:'Nessuna stampante trovata in Bambu Studio. Controlla le impostazioni slicer.'}</p>
+ <div style="max-height:380px;overflow:auto;border:1px solid var(--bd);border-radius:8px"><table style="margin:0"><tr><th>Stampante<th>Prezzo €<th>Vita utile h<th>Consumo W<th>Preriscaldo Wh<th>€/h</tr>${L.map((n,i)=>{const d=have.has(n.toLowerCase());return `<tr${d?' style="opacity:.55"':''}><td style="white-space:nowrap"><label style="display:flex;gap:8px;align-items:center;margin:0;color:var(--tx)"><input type=checkbox style="width:auto" id="pi_c${i}" ${d?'disabled':''}>${esc(n)}${d?' <span class=mu>(già presente)</span>':''}</label><td>${inp(i,'p','',90)}<td>${inp(i,'l',5000,90)}<td>${inp(i,'w',pwEst(n),80)}<td>${inp(i,'e',15,80)}<td id="pi_h${i}" class=mu>-</tr>`}).join('')}</table></div>
+ <div class=bar style="margin-top:12px"><button onclick="$('#dlg').close()">Annulla</button><button class=pr onclick="printAdd()">Importa selezionate</button></div>`;
+ window._pi=L;$('#dlg').style.width='min(820px,94vw)';$('#dlg').style.maxWidth='94vw';$('#dlg').showModal();}
+function printCalc(i){const p=+$('#pi_p'+i).value,l=+$('#pi_l'+i).value;$('#pi_h'+i).textContent=p>0&&l>0?(p/l).toFixed(3).replace('.',',')+' €':'-';const c=$('#pi_c'+i);if(c&&!c.disabled&&p>0)c.checked=true}
+function printAdd(){let n=0;(window._pi||[]).forEach((nm,i)=>{const c=$('#pi_c'+i);if(!c||c.disabled||!c.checked)return;const p=+$('#pi_p'+i).value||0,l=+$('#pi_l'+i).value||0;db.printers.push({id:uid(),name:nm,price:p||'',lifeH:l||'',costHour:p>0&&l>0?+(p/l).toFixed(3):0,watts:+$('#pi_w'+i).value||0,preheatWh:+$('#pi_e'+i).value||0});n++});
+ if(n){save();$('#dlg').close();go('printers')}else alert('Seleziona almeno una stampante.')}
 async function slSettings(){
  if(!(window.api&&api.slicerInfo))return;
  const i=await api.slicerInfo(),c=i.cfg,el=$('#slcfg');if(!el)return;

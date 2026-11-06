@@ -1,7 +1,7 @@
 {
-  "version": "2026.11.06.2",
-  "notes": "Il controllo aggiornamenti ora mostra: Ultima versione installata.",
+  "version": "2026.11.06.3",
+  "notes": "Stampanti: importazione da Bambu Studio con prezzo, vita utile e costo €/h calcolato.",
   "file": "index.html",
-  "sha256": "8e22c22ee0cd6155a900e868e300888aa471faeac5f538748a136336b00d4c1a",
+  "sha256": "d9125e072d728a951bd4fd81579b059fbe51f8918f29f9cb00bc490f2171e662",
   "needShell": 2
 }
