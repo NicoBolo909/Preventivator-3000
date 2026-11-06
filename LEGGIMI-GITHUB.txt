@@ -1,0 +1,33 @@
+PREVENTIVATOR 3000 - AGGIORNAMENTI OTA VIA GITHUB (repository privato)
+
+1) CREA IL REPOSITORY (una volta sola)
+   - Su github.com: "New repository", nome a scelta (es. preventivator-3000), tipo PRIVATE.
+   - Carica in questo repository i file di questa cartella: index.html e version.json
+     ("Add file" > "Upload files", poi "Commit changes"). Devono stare nella radice, non in una sottocartella.
+
+2) CREA IL TOKEN DI LETTURA (una volta sola)
+   - GitHub > Settings > Developer settings > Personal access tokens > Fine-grained tokens > Generate new token.
+   - Repository access: "Only select repositories" > scegli solo il tuo repository.
+   - Permissions > Repository permissions > Contents: "Read-only".
+   - Scegli una scadenza lunga (es. 1 anno) e copia il token (inizia con github_pat_...).
+   Il token puo' SOLO leggere quel repository. Non darlo a nessun altro.
+
+3) COLLEGA IL PROGRAMMA
+   - Installa una volta l'archivio completo piu' recente (versione con aggiornamenti OTA).
+   - Impostazioni > Aggiornamenti: scrivi utente/nome-repository, incolla il token,
+     lascia "Controlla gli aggiornamenti all'avvio" attivo e premi "Salva e controlla ora".
+   - Il token viene salvato cifrato sul tuo computer.
+
+4) PUBBLICARE UN AGGIORNAMENTO
+   - Ogni volta che ti preparo una nuova versione ricevi due file: index.html e version.json.
+   - Caricali nel repository sostituendo quelli vecchi (Upload files > stessi nomi > Commit).
+   - All'avvio successivo il programma scarica la novita', controlla che il file sia integro e
+     mostra "Aggiornamento pronto - Riavvia ora".
+
+NOTE
+   - Gli aggiornamenti OTA cambiano l'interfaccia e le funzioni della pagina. Se una modifica tocca
+     anche la parte di sistema (main.js, Bambu Studio, icone) il programma ti avvisa che serve
+     l'archivio completo e usi Aggiorna come sempre.
+   - "Torna alla versione inclusa" (Impostazioni > Aggiornamenti) elimina l'ultimo aggiornamento scaricato.
+   - Quando installi un archivio completo piu' recente dell'ultimo OTA, il programma usa da solo la versione piu' nuova.
+   - Se un giorno il repository diventa pubblico il token non serve piu': lascia il campo vuoto.
