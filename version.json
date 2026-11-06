@@ -1,7 +1,7 @@
 {
-  "version": "2026.11.06.7",
-  "notes": "Materiali divisi in gruppi per nome, con numero di colori, grammi totali e apertura a scomparsa.",
+  "version": "2026.11.07.1",
+  "notes": "Importazione filamenti: mostra quanti ne ha trovati in Bambu Studio.",
   "file": "index.html",
-  "sha256": "b808d5e81b08fcdb4939b4ced93be126c3871dcd454d9e65e06fd9dc60a2ccd3",
+  "sha256": "2cae2f1adcecd44bf386e77d04d6269e0f3a5a5360b2b97b6d6a48a7684bb8b8",
   "needShell": 2
 }

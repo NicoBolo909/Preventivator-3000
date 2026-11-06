@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=2026.11.06.7-->
+<!--APP_VER=2026.11.07.1-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -425,8 +425,9 @@ function edit(k,id){if(k=='materials')return matDrw(id);const e=E[k],r=find(k,id
  if(k=='printers')['f_price','f_lifeH'].forEach(i=>{$('#'+i).oninput=()=>{const p=+$('#f_price').value,l=+$('#f_lifeH').value;if(p>0&&l>0)$('#f_costHour').value=(p/l).toFixed(3)}});}
 async function bsLoad(){
  const s=$('#bsel');let l=[];
- try{l=((await api.presets()).filament||[]).filter(x=>x.src=='user'||!/nozzle/i.test(x.name))}catch(e){}
+ let mt=null;try{const pr=await api.presets();mt=pr.meta;l=(pr.filament||[]).filter(x=>x.src=='user'||!/nozzle/i.test(x.name))}catch(e){}
  window._bs=l;
+ if(mt&&!$('#bsinfo'))s.insertAdjacentHTML('afterend',`<p class=mu id=bsinfo style="margin:4px 0 0">Filamenti trovati: ${l.length} · scelti in Bambu Studio: ${mt.whitelist||'tutti'} · profili di sistema letti: ${mt.systemFiles?mt.systemFiles.filament:0}. Per vederne altri aggiungili in Bambu Studio e chiudilo.</p>`);
  s.innerHTML=l.length?`<option value="">Scegli un filamento…</option>`+l.map((x,i)=>`<option value="${i}">${esc(x.name)}${x.src=='user'?' (tuo)':''}</option>`).join(''):'<option value="">Nessun filamento trovato in Bambu Studio</option>';}
 function bsPick(i){
  const x=(window._bs||[])[i];if(!x)return;const f=x.info||{},set=(id,v)=>{const el=$('#f_'+id);if(el&&v!==''&&v!=null)el.value=v};setTimeout(()=>colSync(),0);
