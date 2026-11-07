@@ -1,7 +1,7 @@
 {
-  "version": "2026.11.07.3",
-  "notes": "Nuova grafica: tabelle, pulsanti, campi, riassunto del preventivo e finestre piu puliti e ordinati.",
+  "version": "3000.1.0",
+  "notes": "Prima versione ufficiale: Preventivator 3000 V1.0.",
   "file": "index.html",
-  "sha256": "5de78896a3b8715a2042aee8600f7ae017def23a837c6b6208df6b817014b4e3",
+  "sha256": "524d70bce1da59ac80dee6999b2c45235e4b610acc72a7b9ea1e6165d8984ef7",
   "needShell": 2
 }

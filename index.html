@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=2026.11.07.3-->
+<!--APP_VER=3000.1.0-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -1052,12 +1052,14 @@ function sett(){const S=db.settings;
  <div class=g3>${f('paypal','PayPal.Me (nome utente o link)','text')}${f('satispay','Satispay (link di pagamento o numero)','text')}${f('iban','IBAN per bonifico','text')}${f('holder','Intestatario conto','text')}${f('bank','Banca (facoltativo)','text')}</div>
  <h3>Backup</h3><p class=mu>I dati sono salvati in questo browser. Esporta un backup ogni tanto.</p>
  <button onclick="bk()">Esporta backup</button> <label style="display:inline-block"><span class=mu>Importa backup</span><input type=file accept=".json" onchange="imp(this)"></label><div id=slcfg></div><div id=otacfg></div>`;}
+/* Numero interno 3000.x.y mostrato come Vx.y: deve restare piu' alto delle vecchie versioni 2026.* */
+const vv=x=>'V'+String(x??'').replace(/^v/i,'').replace(/^3000\./,'');
 async function otaSettings(){
  const el=$('#otacfg');if(!el)return;
  if(!(window.api&&api.otaInfo)){el.innerHTML='<h3 style="margin-top:22px">Aggiornamenti</h3><div class=card><p class=mu>Gli aggiornamenti automatici sono disponibili solo nell\'app installata. Se hai appena aggiornato, serve l\'archivio completo con la versione 2 del programma.</p></div>';return}
  const i=await api.otaInfo();
  el.innerHTML=`<h3 style="margin-top:22px">Aggiornamenti</h3><div class=card>
-  <p><b>Versione installata:</b> ${esc(i.version)} ${i.version!=i.bundled?`<span class=mu>· aggiornata online (versione inclusa ${esc(i.bundled)})</span>`:''}</p>
+  <p><b>Versione installata:</b> ${esc(vv(i.version))} ${i.version!=i.bundled?`<span class=mu>· aggiornata online (versione inclusa ${esc(vv(i.bundled))})</span>`:''}</p>
   <div class=g3><label>Repository GitHub (utente/nome)<input id=ot_r value="${esc(i.repo)}" placeholder="es. mionome/preventivator-3000"></label>
   <label>Ramo<input id=ot_b value="${esc(i.branch||'main')}"></label>
   <label>Token di accesso ${i.hasToken?'<span class=mu>(già salvato)</span>':''}<input id=ot_t type=password autocomplete=off placeholder="${i.hasToken?'lascia vuoto per mantenerlo':'serve se il repository è privato'}"></label></div>
@@ -1068,13 +1070,13 @@ async function otaSave(chk){await api.otaSet({repo:$('#ot_r').value,branch:$('#o
  if(!chk){$('#ot_s').textContent='Impostazioni salvate.';otaSettings();return}
  $('#ot_s').textContent='Controllo in corso…';const r=await api.otaCheck();otaShow(r)}
 function otaShow(r){const s=$('#ot_s');
- if(r.state=='ok'){if(s)s.textContent='Ultima versione installata ('+r.current+').'}
- else if(r.state=='ready'){if(s)s.textContent='Aggiornamento '+r.latest+' scaricato.';otaToast(r)}
- else if(r.state=='full'){if(s)s.textContent='La versione '+r.latest+' richiede l\'archivio completo (aggiornamento manuale con Aggiorna).'}
+ if(r.state=='ok'){if(s)s.textContent='Ultima versione installata ('+vv(r.current)+').'}
+ else if(r.state=='ready'){if(s)s.textContent='Aggiornamento '+vv(r.latest)+' scaricato.';otaToast(r)}
+ else if(r.state=='full'){if(s)s.textContent='La versione '+vv(r.latest)+' richiede l\'archivio completo (aggiornamento manuale con Aggiorna).'}
  else if(s)s.textContent='Errore: '+r.error}
 function otaToast(r){let t=document.getElementById('otat');if(t)t.remove();t=document.createElement('div');t.id='otat';
  t.style.cssText='position:fixed;right:18px;bottom:18px;z-index:9999;background:var(--card,#fff);color:var(--tx,#111);border:1px solid var(--bd,#ccc);border-left:4px solid var(--ac,#16a34a);border-radius:12px;padding:14px 16px;box-shadow:0 10px 30px rgba(0,0,0,.25);max-width:340px;font-size:14px';
- t.innerHTML=`<b>Aggiornamento ${esc(r.latest)} pronto</b>${r.notes?`<div class=mu style="margin:6px 0;white-space:pre-line">${esc(r.notes)}</div>`:''}<div style="display:flex;gap:8px;margin-top:10px"><button class=go onclick="api.otaRestart()">Riavvia ora</button><button onclick="this.closest('#otat').remove()">Più tardi</button></div>`;document.body.appendChild(t)}
+ t.innerHTML=`<b>Aggiornamento ${esc(vv(r.latest))} pronto</b>${r.notes?`<div class=mu style="margin:6px 0;white-space:pre-line">${esc(r.notes)}</div>`:''}<div style="display:flex;gap:8px;margin-top:10px"><button class=go onclick="api.otaRestart()">Riavvia ora</button><button onclick="this.closest('#otat').remove()">Più tardi</button></div>`;document.body.appendChild(t)}
 async function otaReset(){if(!confirm('Tornare alla versione inclusa nell\'app? Al prossimo avvio potrebbe riscaricare l\'ultima.'))return;await api.otaReset();api.otaRestart()}
 async function otaClearTok(){await api.otaSet({clearToken:true});otaSettings()}
 if(window.api&&api.onOta)api.onOta(r=>otaToast(r));
