@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.0",
-  "notes": "Prima versione ufficiale: Preventivator 3000 V1.0.",
+  "version": "3000.1.0.1",
+  "notes": "Piccola correzione alla barra degli oggetti nel preventivo.",
   "file": "index.html",
-  "sha256": "524d70bce1da59ac80dee6999b2c45235e4b610acc72a7b9ea1e6165d8984ef7",
+  "sha256": "0ae3ac49351586fb91ff9f03373fd6a98b3cf49114a4691058ec338767503b66",
   "needShell": 2
 }

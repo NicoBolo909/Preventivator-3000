@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=3000.1.0-->
+<!--APP_VER=3000.1.0.1-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -269,7 +269,7 @@ label input,label select,label textarea{margin-top:5px}
 /* preventivo */
 .qe h2{letter-spacing:-.02em}.qtool{margin-bottom:14px}
 .pillx{background:var(--tint2);border-color:transparent}
-.qtb{padding-bottom:14px;margin-bottom:16px}.qtb .inl input,.qtb .inl select{margin-top:0}
+.qtb{padding-bottom:14px;margin-bottom:16px}.qtb .inl input,.qtb .inl select{margin-top:0}.qtb .inl{min-width:320px}.qtb .inl:last-child{min-width:0}
 .qrow label>div>button{margin-top:5px;min-height:37px}.crow button{white-space:nowrap;flex:none}.crow input{margin-top:0}
 #dlg .bar:last-child{margin-bottom:0}
 .itc{gap:18px;border-radius:14px}
@@ -1052,8 +1052,8 @@ function sett(){const S=db.settings;
  <div class=g3>${f('paypal','PayPal.Me (nome utente o link)','text')}${f('satispay','Satispay (link di pagamento o numero)','text')}${f('iban','IBAN per bonifico','text')}${f('holder','Intestatario conto','text')}${f('bank','Banca (facoltativo)','text')}</div>
  <h3>Backup</h3><p class=mu>I dati sono salvati in questo browser. Esporta un backup ogni tanto.</p>
  <button onclick="bk()">Esporta backup</button> <label style="display:inline-block"><span class=mu>Importa backup</span><input type=file accept=".json" onchange="imp(this)"></label><div id=slcfg></div><div id=otacfg></div>`;}
-/* Numero interno 3000.x.y mostrato come Vx.y: deve restare piu' alto delle vecchie versioni 2026.* */
-const vv=x=>'V'+String(x??'').replace(/^v/i,'').replace(/^3000\./,'');
+/* Numero interno 3000.x.y[.z] mostrato come Vx.y: deve restare piu' alto delle vecchie versioni 2026.*; z sono le correzioni che non cambiano il nome */
+const vv=x=>'V'+String(x??'').replace(/^v/i,'').replace(/^3000\.(\d+)\.(\d+)(\.\d+)*$/,'$1.$2');
 async function otaSettings(){
  const el=$('#otacfg');if(!el)return;
  if(!(window.api&&api.otaInfo)){el.innerHTML='<h3 style="margin-top:22px">Aggiornamenti</h3><div class=card><p class=mu>Gli aggiornamenti automatici sono disponibili solo nell\'app installata. Se hai appena aggiornato, serve l\'archivio completo con la versione 2 del programma.</p></div>';return}
