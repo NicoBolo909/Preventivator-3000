@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.2.1",
-  "notes": "Nuovo tema Fibra di carbonio: lo trovi in Impostazioni, Aspetto.",
+  "version": "3000.1.2.2",
+  "notes": "Libreria colori: lettura dei PDF migliorata e conferma prima di sostituire una linea.",
   "file": "index.html",
-  "sha256": "64704d42e6c68277f56165e8e7c36cf41160f212e64b384a482252643670b309",
+  "sha256": "c0529727de232ce0b815430d6f268f110f7d73138c8962226ed688fb2f9cb21c",
   "needShell": 2
 }
