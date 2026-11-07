@@ -1,5 +1,7 @@
 # Preventivator 3000
 
+**Italiano** | [English](README.en.md)
+
 **Preventivi per stampa 3D, dal file al PDF.** Carica i tuoi modelli, ricava peso e tempi con Bambu Studio e ottieni un prezzo basato sui costi reali: materiale, energia, ammortamento della stampante, scarti e manodopera.
 
 ![Dashboard di Preventivator 3000](docs/screenshots/dashboard.png)
