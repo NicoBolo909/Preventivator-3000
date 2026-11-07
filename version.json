@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.0.1",
-  "notes": "Piccola correzione alla barra degli oggetti nel preventivo.",
+  "version": "3000.1.1",
+  "notes": "Corretto il nome dei materiali che poteva cambiare da solo. Se un materiale ha il nome sbagliato, correggilo una volta da Materiali.",
   "file": "index.html",
-  "sha256": "0ae3ac49351586fb91ff9f03373fd6a98b3cf49114a4691058ec338767503b66",
+  "sha256": "e3e8102cbf75df88e7e9699d93f02eb3e7305f1931e51f07fd8d8acd94ae0432",
   "needShell": 2
 }

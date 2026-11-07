@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=3000.1.0.1-->
+<!--APP_VER=3000.1.1-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -510,7 +510,7 @@ function matRef(){$('#mlist').innerHTML=matRows();selUi()}
 function colSync(src){const t=$('#f_color'),p=$('#cpick');if(src=='pick')t.value=p.value;else if(/^#[0-9a-f]{6}$/i.test(t.value))p.value=t.value;$('#drwsw').style.background=t.value||'repeating-conic-gradient(#999 0 25%,#ccc 0 50%) 50%/12px 12px'}
 function closeDrw(){['#drw','#drwbg'].forEach(s=>{const e=document.querySelector(s);e&&e.remove()})}
 function matDrw(id){const r=find('materials',id)||{},v=k=>esc(r[k]??''),n=(k,l,ph,u)=>`<label>${l}<input id="f_${k}" type=number step=any value="${v(k)}" placeholder="${ph||''}"></label>`,t=(k,l,ph)=>`<label>${l}<input id="f_${k}" type=text value="${v(k)}" placeholder="${ph||''}"></label>`;
- closeDrw();document.body.insertAdjacentHTML('beforeend',`<div id=drwbg onclick=closeDrw()></div><aside id=drw><header><span class=sw id=drwsw></span><b>${id?'Aggiorna materiale':'Nuovo materiale'}</b><button class=ib onclick=closeDrw() title=Chiudi>×</button></header><div class=drwb>
+ closeDrw();$('#dlg').innerHTML='';/* la finestra chiusa di stampanti, clienti ecc. ha campi con gli stessi id */document.body.insertAdjacentHTML('beforeend',`<div id=drwbg onclick=closeDrw()></div><aside id=drw><header><span class=sw id=drwsw></span><b>${id?'Aggiorna materiale':'Nuovo materiale'}</b><button class=ib onclick=closeDrw() title=Chiudi>×</button></header><div class=drwb>
  ${!id&&window.api&&api.presets?`<label>Importa da Bambu Studio<select id=bsel onchange="bsPick(this.value)"><option value="">Caricamento…</option></select></label>`:''}
  <div class=g2>${t('name','Nome materiale')}${t('code','Codice prodotto/colore','Es. PLA-MATTE-BLK-042')}</div><div class=g2>${t('type','Tipo (PLA, PETG…)')}${t('colorName','Nome colore')}</div>
  <label>Colore materiale<div class=crow><input type=color id=cpick value="${/^#[0-9a-f]{6}$/i.test(r.color||'')?r.color:'#808080'}" oninput="colSync('pick')"><input id=f_color type=text value="${v('color')}" placeholder="#RRGGBB" oninput="colSync()"><button type=button onclick="$('#f_color').value='';colSync()">Nessun colore</button></div></label>
