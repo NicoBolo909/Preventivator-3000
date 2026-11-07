@@ -3,7 +3,7 @@
   "linee": [
     {
       "linea": "Bambu Lab ABS (versione A)",
-      "file": "pdf/Bambu ABS - versione A.pdf",
+      "file": "Bambulab/Bambu ABS - versione A.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/a7d9f82d874c453cbbc1bb0efb82dd42/Bambu_ABS_Hex_Code_(1).pdf",
       "colori": [
         {
@@ -58,7 +58,7 @@
     },
     {
       "linea": "Bambu Lab ABS (versione B)",
-      "file": "pdf/Bambu ABS - versione B.pdf",
+      "file": "Bambulab/Bambu ABS - versione B.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/4a24cb39669046289b1c258680d5c499/Bambu_ABS_Hex_Code.pdf",
       "colori": [
         {
@@ -113,7 +113,7 @@
     },
     {
       "linea": "Bambu Lab ABS-GF",
-      "file": "pdf/Bambu ABS-GF.pdf",
+      "file": "Bambulab/Bambu ABS-GF.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/7d0175cb776b415e94eec1a8c7ffbf54/ABS-GF_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -144,7 +144,7 @@
     },
     {
       "linea": "Bambu Lab ASA",
-      "file": "pdf/Bambu ASA.pdf",
+      "file": "Bambulab/Bambu ASA.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/8b59c35ced5c4b848affd97e0664e12c/ASA_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -175,7 +175,7 @@
     },
     {
       "linea": "Bambu Lab PA6-GF",
-      "file": "pdf/Bambu PA6-GF.pdf",
+      "file": "Bambulab/Bambu PA6-GF.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/59bf6c3e0af14df380b9c69c40b02772/PA6-GF_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -214,7 +214,7 @@
     },
     {
       "linea": "Bambu Lab PC",
-      "file": "pdf/Bambu PC.pdf",
+      "file": "Bambulab/Bambu PC.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/e6a6c5416fc440d88639172ff9e546ac/PC_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -237,7 +237,7 @@
     },
     {
       "linea": "Bambu Lab PC FR",
-      "file": "pdf/Bambu PC FR.pdf",
+      "file": "Bambulab/Bambu PC FR.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/9fc931c1464542df9c5fc5d9f6f9bf4b/PC_FR_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -256,7 +256,7 @@
     },
     {
       "linea": "Bambu Lab PETG Basic (versione A)",
-      "file": "pdf/Bambu PETG Basic - versione A.pdf",
+      "file": "Bambulab/Bambu PETG Basic - versione A.pdf",
       "fonte": "https://store.bblcdn.com/s2/default/d2138ff5c32b4b2896f60508df9a27bf/PETG_Basic_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -315,7 +315,7 @@
     },
     {
       "linea": "Bambu Lab PETG Basic (versione B)",
-      "file": "pdf/Bambu PETG Basic - versione B.pdf",
+      "file": "Bambulab/Bambu PETG Basic - versione B.pdf",
       "fonte": "https://store.bblcdn.com/s1/default/1e4af3b3c12948ccb04433a8499c3264/PETG_Basic_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -350,7 +350,7 @@
     },
     {
       "linea": "Bambu Lab PETG HF",
-      "file": "pdf/Bambu PETG HF.pdf",
+      "file": "Bambulab/Bambu PETG HF.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/f9b2b5ac54aa4aabaf2d725e6a830045/PETG_HF_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -413,7 +413,7 @@
     },
     {
       "linea": "Bambu Lab PETG Matte",
-      "file": "pdf/Bambu PETG Matte.pdf",
+      "file": "Bambulab/Bambu PETG Matte.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/9b109944ad61471eb35d46e6263a28ff/Bambu_PETG_Matte_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -452,7 +452,7 @@
     },
     {
       "linea": "Bambu Lab PETG Translucent",
-      "file": "pdf/Bambu PETG Translucent.pdf",
+      "file": "Bambulab/Bambu PETG Translucent.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/5c46875459bc4a27986707f49560a961/PETG_Translucent_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -491,7 +491,7 @@
     },
     {
       "linea": "Bambu Lab PETG-CF",
-      "file": "pdf/Bambu PETG-CF.pdf",
+      "file": "Bambulab/Bambu PETG-CF.pdf",
       "fonte": "https://store.bblcdn.com/s1/default/72c1318eb3d943b09d9187ae51737d98/PETG-CF_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -522,7 +522,7 @@
     },
     {
       "linea": "Bambu Lab PLA Basic",
-      "file": "pdf/Bambu PLA Basic.pdf",
+      "file": "Bambulab/Bambu PLA Basic.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/1084369ef84345bbaa5d704a492954e0/Bambu_PLA_Basic_Hex_Code.pdf",
       "colori": [
         {
@@ -649,7 +649,7 @@
     },
     {
       "linea": "Bambu Lab PLA Basic Color Trial Set",
-      "file": "pdf/Bambu PLA Basic - Color Trial Set.pdf",
+      "file": "Bambulab/Bambu PLA Basic - Color Trial Set.pdf",
       "fonte": "https://store.bblcdn.eu/s8/default/d05d60f466004b049144c5d152f21c69/Bambu_PLA_Basic_Color_Trial_Set_Hex_Code.pdf",
       "colori": [
         {
@@ -704,7 +704,7 @@
     },
     {
       "linea": "Bambu Lab PLA Basic Refill",
-      "file": "pdf/Bambu PLA Basic - Refill.pdf",
+      "file": "Bambulab/Bambu PLA Basic - Refill.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/716e7544652048698930b01d63307679/PLA_Basic_Hex_Code_Table_Refill.pdf",
       "colori": [
         {
@@ -751,7 +751,7 @@
     },
     {
       "linea": "Bambu Lab PLA Galaxy",
-      "file": "pdf/Bambu PLA Galaxy.pdf",
+      "file": "Bambulab/Bambu PLA Galaxy.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/dcb05d280a474fb095adfee359c13574/PLA_Galaxy_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -774,7 +774,7 @@
     },
     {
       "linea": "Bambu Lab PLA Glow",
-      "file": "pdf/Bambu PLA Glow.pdf",
+      "file": "Bambulab/Bambu PLA Glow.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/bbc0a351ffca4503968910ba98cae27d/PLA_Glow_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -801,7 +801,7 @@
     },
     {
       "linea": "Bambu Lab PLA Matte",
-      "file": "pdf/Bambu PLA Matte.pdf",
+      "file": "Bambulab/Bambu PLA Matte.pdf",
       "fonte": "https://store.bblcdn.eu/s8/default/f131f643495b417197832b291fc7b068/Bambu_PLA_Matte_Hex_Code.pdf",
       "colori": [
         {
@@ -908,7 +908,7 @@
     },
     {
       "linea": "Bambu Lab PLA Palette",
-      "file": "pdf/Bambu PLA Palette.pdf",
+      "file": "Bambulab/Bambu PLA Palette.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/8a89cc11c9ce4421a9593f9ee9580982/Bambu_PLA_Palette_Hex_Code.pdf",
       "colori": [
         {
@@ -935,7 +935,7 @@
     },
     {
       "linea": "Bambu Lab PLA Pure",
-      "file": "pdf/Bambu PLA Pure.pdf",
+      "file": "Bambulab/Bambu PLA Pure.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/cb680ec8a366477b9379e2fe1eba98e9/Bambu_PLA_Pure_Hex_Code.pdf",
       "colori": [
         {
@@ -963,7 +963,7 @@
     },
     {
       "linea": "Bambu Lab PLA Silk+",
-      "file": "pdf/Bambu PLA Silk Plus.pdf",
+      "file": "Bambulab/Bambu PLA Silk Plus.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/8aaeedf46e504db4afa2fc13cfbfae0a/PLA_Silk_Upgrade_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -1022,7 +1022,7 @@
     },
     {
       "linea": "Bambu Lab PLA Sparkle",
-      "file": "pdf/Bambu PLA Sparkle.pdf",
+      "file": "Bambulab/Bambu PLA Sparkle.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/2a16583d2dc6404ea2ebcdf192441852/PLA_Sparkle_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -1053,7 +1053,7 @@
     },
     {
       "linea": "Bambu Lab PLA Tough+",
-      "file": "pdf/Bambu PLA Tough Plus.pdf",
+      "file": "Bambulab/Bambu PLA Tough Plus.pdf",
       "fonte": "https://store.bblcdn.com/s1/default/3d989ddc07694c378496784834947125/Bambu_PLA_Tough_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -1088,7 +1088,7 @@
     },
     {
       "linea": "Bambu Lab PLA Translucent",
-      "file": "pdf/Bambu PLA Translucent.pdf",
+      "file": "Bambulab/Bambu PLA Translucent.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/2dbf9e91887b486693323dda23adcbb5/PLA_Translucent_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -1135,7 +1135,7 @@
     },
     {
       "linea": "Bambu Lab PLA Wood",
-      "file": "pdf/Bambu PLA Wood.pdf",
+      "file": "Bambulab/Bambu PLA Wood.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/312a35d5cdce4fc5a76692955b493a82/PLA_Wood_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -1166,7 +1166,7 @@
     },
     {
       "linea": "Bambu Lab PLA-CF",
-      "file": "pdf/Bambu PLA-CF.pdf",
+      "file": "Bambulab/Bambu PLA-CF.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/98df744e02e04d8599956b4fe8b19ff4/PLA-CF_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -1201,7 +1201,7 @@
     },
     {
       "linea": "Bambu Lab TPU 85A",
-      "file": "pdf/Bambu TPU 85A.pdf",
+      "file": "Bambulab/Bambu TPU 85A.pdf",
       "fonte": "https://store-pre.bblcdn.com/s1/default/2373005ac1ae4f4b88416f8c7e23bbbe/Bambu_TPU_85A_Hex_Code.pdf",
       "colori": [
         {
@@ -1228,7 +1228,7 @@
     },
     {
       "linea": "Bambu Lab TPU 90A",
-      "file": "pdf/Bambu TPU 90A.pdf",
+      "file": "Bambulab/Bambu TPU 90A.pdf",
       "fonte": "https://store.bblcdn.com/s1/default/7e2c8bbbf2ff4c6996778bbb577bae13/Bambu_TPU_90A_Hex_Code_Table.pdf",
       "colori": [
         {
@@ -1267,7 +1267,7 @@
     },
     {
       "linea": "Bambu Lab TPU 95A HF",
-      "file": "pdf/Bambu TPU 95A HF.pdf",
+      "file": "Bambulab/Bambu TPU 95A HF.pdf",
       "fonte": "https://store.bblcdn.com/s7/default/6ec4738ccb144e8880cfec81a4cb6665/TPU_95A_HF_Hex_Code_Table.pdf",
       "colori": [
         {
