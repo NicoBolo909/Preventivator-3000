@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.1",
-  "notes": "Corretto il nome dei materiali che poteva cambiare da solo. Se un materiale ha il nome sbagliato, correggilo una volta da Materiali.",
+  "version": "3000.1.2",
+  "notes": "Nuova libreria colori: importa le tabelle colori in PDF e scegli il colore del materiale con un clic.",
   "file": "index.html",
-  "sha256": "e3e8102cbf75df88e7e9699d93f02eb3e7305f1931e51f07fd8d8acd94ae0432",
+  "sha256": "77bb1a14fa8bde6369f103e85553c5112f0d3b2c412ea76997e9f6c5cbd87e6a",
   "needShell": 2
 }

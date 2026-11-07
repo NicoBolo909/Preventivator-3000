@@ -16,6 +16,7 @@
 - **Anteprima 3D:** posiziona e ruota il modello sul piatto della Bambu Lab A1.
 - **Magazzino materiali:** quantità rimaste per bobina e avvisi sotto soglia.
 - **Import da Bambu Studio:** stampanti, materiali e profili di stampa.
+- **Libreria colori:** importa le tabelle colori in PDF e scegli il colore del materiale con un clic.
 - **PDF:** preventivo per il cliente e ordine di lavorazione.
 - **Dashboard:** ordini, fatturato, profitto, materiale e ore di stampa.
 - **Italiano e inglese:** lingua del programma e dei PDF a scelta.
@@ -38,6 +39,14 @@ Stato, totale e azioni rapide per aprire, duplicare o esportare in PDF.
 ![Gestione dei materiali](docs/screenshots/materiali.png)
 
 ![Gestione delle stampanti](docs/screenshots/stampanti.png)
+
+## Libreria colori
+
+Importa una tabella colori in PDF, controlla l'anteprima e aggiungila alla libreria. Nel modulo del materiale scegli la linea e clicchi il colore: nome e codice si compilano da soli. Se un PDF non si legge, puoi inserire i colori a mano.
+
+![Libreria colori](docs/screenshots/libreria.png)
+
+![Scelta rapida del colore](docs/screenshots/scelta-colore.png)
 
 ## Installazione
 

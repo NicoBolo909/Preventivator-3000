@@ -16,6 +16,7 @@
 - **3D preview:** place and rotate the model on the Bambu Lab A1 plate.
 - **Material stock:** remaining amount for each spool and low-stock alerts.
 - **Import from Bambu Studio:** printers, materials and print profiles.
+- **Color library:** import color tables from PDF and pick a material color with one click.
 - **PDF:** a quote for the customer and a work order for production.
 - **Dashboard:** orders, revenue, profit, material and print hours.
 - **Italian and English:** choose the language of the app and of the PDFs.
@@ -38,6 +39,14 @@ Status, total and quick actions to open, duplicate or export to PDF.
 ![Material management](docs/screenshots/en/materials.png)
 
 ![Printer management](docs/screenshots/en/printers.png)
+
+## Color library
+
+Import a color table from a PDF, check the preview and add it to the library. In the material form, choose the line and click a color: its name and code are filled in for you. If a PDF cannot be read, you can enter the colors by hand.
+
+![Color library](docs/screenshots/en/color-library.png)
+
+![Quick color selection](docs/screenshots/en/color-picker.png)
 
 ## Installation
 
