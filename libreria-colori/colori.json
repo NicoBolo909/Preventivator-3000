@@ -1,0 +1,1300 @@
+{
+  "descrizione": "Libreria colori dei filamenti Bambu Lab, ricavata dalle tabelle PDF ufficiali.",
+  "linee": [
+    {
+      "linea": "Bambu Lab ABS (versione A)",
+      "file": "pdf/Bambu ABS - versione A.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/a7d9f82d874c453cbbc1bb0efb82dd42/Bambu_ABS_Hex_Code_(1).pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Bambu Green",
+          "codice": "#00AE42"
+        },
+        {
+          "nome": "Olive",
+          "codice": "#789D4A"
+        },
+        {
+          "nome": "Azure",
+          "codice": "#489FDF"
+        },
+        {
+          "nome": "Navy Blue",
+          "codice": "#0C2340"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#0A2CA5"
+        },
+        {
+          "nome": "Tangerine Yellow",
+          "codice": "#FFC72C"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#FF6A13"
+        },
+        {
+          "nome": "Red",
+          "codice": "#D32941"
+        },
+        {
+          "nome": "Purple",
+          "codice": "#AF1685"
+        },
+        {
+          "nome": "Silver",
+          "codice": "#87909A"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab ABS (versione B)",
+      "file": "pdf/Bambu ABS - versione B.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/4a24cb39669046289b1c258680d5c499/Bambu_ABS_Hex_Code.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Desert Tan",
+          "codice": "#E8DBB7"
+        },
+        {
+          "nome": "Olive",
+          "codice": "#789D4A"
+        },
+        {
+          "nome": "Azure",
+          "codice": "#489FDF"
+        },
+        {
+          "nome": "Navy Blue",
+          "codice": "#0C2340"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#0A2CA5"
+        },
+        {
+          "nome": "Tangerine Yellow",
+          "codice": "#FFC72C"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#FF6A13"
+        },
+        {
+          "nome": "Red",
+          "codice": "#D32941"
+        },
+        {
+          "nome": "Purple",
+          "codice": "#AF1685"
+        },
+        {
+          "nome": "Silver",
+          "codice": "#87909A"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab ABS-GF",
+      "file": "pdf/Bambu ABS-GF.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/7d0175cb776b415e94eec1a8c7ffbf54/ABS-GF_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#C6C6C6"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#F48438"
+        },
+        {
+          "nome": "Red",
+          "codice": "#E83100"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#0C3B95"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab ASA",
+      "file": "pdf/Bambu ASA.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/8b59c35ced5c4b848affd97e0664e12c/ASA_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFAF2"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#8A949E"
+        },
+        {
+          "nome": "Red",
+          "codice": "#E02928"
+        },
+        {
+          "nome": "Green",
+          "codice": "#00A6A0"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#2140B4"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PA6-GF",
+      "file": "pdf/Bambu PA6-GF.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/59bf6c3e0af14df380b9c69c40b02772/PA6-GF_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#EAEAE4"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#75AED8"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#FF4800"
+        },
+        {
+          "nome": "Brown",
+          "codice": "#5B492F"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#FFCE00"
+        },
+        {
+          "nome": "Lime",
+          "codice": "#C5ED48"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#353533"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PC",
+      "file": "pdf/Bambu PC.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/e6a6c5416fc440d88639172ff9e546ac/PC_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Transparent",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Clear Black",
+          "codice": "#686865"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PC FR",
+      "file": "pdf/Bambu PC FR.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/9fc931c1464542df9c5fc5d9f6f9bf4b/PC_FR_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#A8A8AA"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PETG Basic (versione A)",
+      "file": "pdf/Bambu PETG Basic - versione A.pdf",
+      "fonte": "https://store.bblcdn.com/s2/default/d2138ff5c32b4b2896f60508df9a27bf/PETG_Basic_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Red",
+          "codice": "#D6001C"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#FF671F"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#FCE300"
+        },
+        {
+          "nome": "Reflex Blue",
+          "codice": "#001489"
+        },
+        {
+          "nome": "Navy Blue",
+          "codice": "#0086D6"
+        },
+        {
+          "nome": "Misty Blue",
+          "codice": "#688197"
+        },
+        {
+          "nome": "Green",
+          "codice": "#009639"
+        },
+        {
+          "nome": "Pine Green",
+          "codice": "#034638"
+        },
+        {
+          "nome": "Dark Brown",
+          "codice": "#4F2C1D"
+        },
+        {
+          "nome": "Dark Beige",
+          "codice": "#DBC8B6"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#7F7E83"
+        },
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PETG Basic (versione B)",
+      "file": "pdf/Bambu PETG Basic - versione B.pdf",
+      "fonte": "https://store.bblcdn.com/s1/default/1e4af3b3c12948ccb04433a8499c3264/PETG_Basic_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Red",
+          "codice": "#D6001C"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#FCE300"
+        },
+        {
+          "nome": "Reflex Blue",
+          "codice": "#001489"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#7F7E83"
+        },
+        {
+          "nome": "Dark Brown",
+          "codice": "#4F2C1D"
+        },
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PETG HF",
+      "file": "pdf/Bambu PETG HF.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/f9b2b5ac54aa4aabaf2d725e6a830045/PETG_HF_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Cream",
+          "codice": "#F9DFB9"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#FFD00B"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#F75403"
+        },
+        {
+          "nome": "Red",
+          "codice": "#EB3A3A"
+        },
+        {
+          "nome": "Lime Green",
+          "codice": "#6EE53C"
+        },
+        {
+          "nome": "Green",
+          "codice": "#00AE42"
+        },
+        {
+          "nome": "Forest Green",
+          "codice": "#39541A"
+        },
+        {
+          "nome": "Lake Blue",
+          "codice": "#1F79E5"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#002E96"
+        },
+        {
+          "nome": "Peanut Brown",
+          "codice": "#875718"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#ADB1B2"
+        },
+        {
+          "nome": "Dark Gray",
+          "codice": "#515151"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PETG Matte",
+      "file": "pdf/Bambu PETG Matte.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/9b109944ad61471eb35d46e6263a28ff/Bambu_PETG_Matte_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        },
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Pink",
+          "codice": "#FABBCB"
+        },
+        {
+          "nome": "Violet",
+          "codice": "#A7A4E0"
+        },
+        {
+          "nome": "Baby Blue",
+          "codice": "#B9D9EB"
+        },
+        {
+          "nome": "Avocado Green",
+          "codice": "#BCE194"
+        },
+        {
+          "nome": "Lime",
+          "codice": "#C0DF16"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#7F7E83"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PETG Translucent",
+      "file": "pdf/Bambu PETG Translucent.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/5c46875459bc4a27986707f49560a961/PETG_Translucent_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Translucent Pink",
+          "codice": "#F9C1BD"
+        },
+        {
+          "nome": "Translucent Purple",
+          "codice": "#D6ABFF"
+        },
+        {
+          "nome": "Translucent Orange",
+          "codice": "#FF911A"
+        },
+        {
+          "nome": "Translucent Brown",
+          "codice": "#C9A381"
+        },
+        {
+          "nome": "Translucent Teal",
+          "codice": "#77EDD7"
+        },
+        {
+          "nome": "Translucent Light Blue",
+          "codice": "#61B0FF"
+        },
+        {
+          "nome": "Translucent Olive",
+          "codice": "#748C45"
+        },
+        {
+          "nome": "Translucent Gray",
+          "codice": "#8E8E8E"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PETG-CF",
+      "file": "pdf/Bambu PETG-CF.pdf",
+      "fonte": "https://store.bblcdn.com/s1/default/72c1318eb3d943b09d9187ae51737d98/PETG-CF_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Brick Red",
+          "codice": "#9F332A"
+        },
+        {
+          "nome": "Violet Purple",
+          "codice": "#583061"
+        },
+        {
+          "nome": "Indigo Blue",
+          "codice": "#324585"
+        },
+        {
+          "nome": "Malachite Green",
+          "codice": "#16B08E"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        },
+        {
+          "nome": "Titan Gray",
+          "codice": "#565656"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Basic",
+      "file": "pdf/Bambu PLA Basic.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/1084369ef84345bbaa5d704a492954e0/Bambu_PLA_Basic_Hex_Code.pdf",
+      "colori": [
+        {
+          "nome": "Jade White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Beige",
+          "codice": "#F7E6DE"
+        },
+        {
+          "nome": "Light Gray",
+          "codice": "#D1D3D5"
+        },
+        {
+          "nome": "Silver",
+          "codice": "#A6A9AA"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#8E9089"
+        },
+        {
+          "nome": "Magenta",
+          "codice": "#EC008C"
+        },
+        {
+          "nome": "Pink",
+          "codice": "#F55A74"
+        },
+        {
+          "nome": "Hot Pink",
+          "codice": "#F5547C"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#FF6A13"
+        },
+        {
+          "nome": "Pumpkin Orange",
+          "codice": "#FF9016"
+        },
+        {
+          "nome": "Gold",
+          "codice": "#E4BD68"
+        },
+        {
+          "nome": "Sunflower Yellow",
+          "codice": "#FEC600"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#F4EE2A"
+        },
+        {
+          "nome": "Bright Green",
+          "codice": "#BECF00"
+        },
+        {
+          "nome": "Bambu Green",
+          "codice": "#00AE42"
+        },
+        {
+          "nome": "Mistletoe Green",
+          "codice": "#3F8E43"
+        },
+        {
+          "nome": "Bronze",
+          "codice": "#847D48"
+        },
+        {
+          "nome": "Cocoa Brown",
+          "codice": "#6F5034"
+        },
+        {
+          "nome": "Brown",
+          "codice": "#9D432C"
+        },
+        {
+          "nome": "Maroon Red",
+          "codice": "#9D2235"
+        },
+        {
+          "nome": "Red",
+          "codice": "#C12E1F"
+        },
+        {
+          "nome": "Turquoise",
+          "codice": "#00B1B7"
+        },
+        {
+          "nome": "Cyan",
+          "codice": "#0086D6"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#0A2989"
+        },
+        {
+          "nome": "Cobalt Blue",
+          "codice": "#0056B8"
+        },
+        {
+          "nome": "Purple",
+          "codice": "#5E43B7"
+        },
+        {
+          "nome": "Indigo Purple",
+          "codice": "#482960"
+        },
+        {
+          "nome": "Blue Grey",
+          "codice": "#5B6579"
+        },
+        {
+          "nome": "Dark Gray",
+          "codice": "#545454"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Basic Color Trial Set",
+      "file": "pdf/Bambu PLA Basic - Color Trial Set.pdf",
+      "fonte": "https://store.bblcdn.eu/s8/default/d05d60f466004b049144c5d152f21c69/Bambu_PLA_Basic_Color_Trial_Set_Hex_Code.pdf",
+      "colori": [
+        {
+          "nome": "Jade White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Beige",
+          "codice": "#F7E6DE"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#8E9089"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#F4EE2A"
+        },
+        {
+          "nome": "Bambu Green",
+          "codice": "#00AE42"
+        },
+        {
+          "nome": "Cyan",
+          "codice": "#0086D6"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#FF6A13"
+        },
+        {
+          "nome": "Red",
+          "codice": "#C12E1F"
+        },
+        {
+          "nome": "Purple",
+          "codice": "#5E43B7"
+        },
+        {
+          "nome": "Cocoa Brown",
+          "codice": "#6F5034"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#0A2989"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Basic Refill",
+      "file": "pdf/Bambu PLA Basic - Refill.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/716e7544652048698930b01d63307679/PLA_Basic_Hex_Code_Table_Refill.pdf",
+      "colori": [
+        {
+          "nome": "JadeWhite",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#8E9089"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#F4EE2A"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#FF6A13"
+        },
+        {
+          "nome": "Red",
+          "codice": "#C12E1F"
+        },
+        {
+          "nome": "Bambu Green",
+          "codice": "#00AE42"
+        },
+        {
+          "nome": "Cyan",
+          "codice": "#0086D6"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#0A2989"
+        },
+        {
+          "nome": "Purple",
+          "codice": "#5E43B7"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Galaxy",
+      "file": "pdf/Bambu PLA Galaxy.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/dcb05d280a474fb095adfee359c13574/PLA_Galaxy_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Brown (Brown base with gold shimmer)",
+          "codice": "#684A43"
+        },
+        {
+          "nome": "Green (Green base with gold shimmer)",
+          "codice": "#3B665E"
+        },
+        {
+          "nome": "Nebulae (Deep blue base with green shimmer)",
+          "codice": "#424379"
+        },
+        {
+          "nome": "Purple (Purple base with blue shimmer)",
+          "codice": "#594177"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Glow",
+      "file": "pdf/Bambu PLA Glow.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/bbc0a351ffca4503968910ba98cae27d/PLA_Glow_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Glow Green",
+          "codice": "#A1FFAC"
+        },
+        {
+          "nome": "Glow Yellow",
+          "codice": "#F8FF80"
+        },
+        {
+          "nome": "Glow Pink",
+          "codice": "#F17B8F"
+        },
+        {
+          "nome": "Glow Blue",
+          "codice": "#7AC0E9"
+        },
+        {
+          "nome": "Glow Orange",
+          "codice": "#FF9D5B"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Matte",
+      "file": "pdf/Bambu PLA Matte.pdf",
+      "fonte": "https://store.bblcdn.eu/s8/default/f131f643495b417197832b291fc7b068/Bambu_PLA_Matte_Hex_Code.pdf",
+      "colori": [
+        {
+          "nome": "Ivory White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Bone White",
+          "codice": "#CBC6B8"
+        },
+        {
+          "nome": "Desert Tan",
+          "codice": "#E8DBB7"
+        },
+        {
+          "nome": "Latte Brown",
+          "codice": "#D3B7A7"
+        },
+        {
+          "nome": "Caramel",
+          "codice": "#AE835B"
+        },
+        {
+          "nome": "Terracotta",
+          "codice": "#B15533"
+        },
+        {
+          "nome": "Dark Brown",
+          "codice": "#7D6556"
+        },
+        {
+          "nome": "Dark Chocolate",
+          "codice": "#4D3324"
+        },
+        {
+          "nome": "Lilac Purple",
+          "codice": "#AE96D4"
+        },
+        {
+          "nome": "Sakura Pink",
+          "codice": "#E8AFCF"
+        },
+        {
+          "nome": "Mandarin Orange",
+          "codice": "#F99963"
+        },
+        {
+          "nome": "Lemon Yellow",
+          "codice": "#F7D959"
+        },
+        {
+          "nome": "Plum",
+          "codice": "#950051"
+        },
+        {
+          "nome": "Scarlet Red",
+          "codice": "#DE4343"
+        },
+        {
+          "nome": "Dark Red",
+          "codice": "#BB3D43"
+        },
+        {
+          "nome": "Dark Green",
+          "codice": "#68724D"
+        },
+        {
+          "nome": "Grass Green",
+          "codice": "#61C680"
+        },
+        {
+          "nome": "Apple Green",
+          "codice": "#C2E189"
+        },
+        {
+          "nome": "Ice Blue",
+          "codice": "#A3D8E1"
+        },
+        {
+          "nome": "Sky Blue",
+          "codice": "#56B7E6"
+        },
+        {
+          "nome": "Marine Blue",
+          "codice": "#0078BF"
+        },
+        {
+          "nome": "Dark Blue",
+          "codice": "#042F56"
+        },
+        {
+          "nome": "Ash Gray",
+          "codice": "#9B9EA0"
+        },
+        {
+          "nome": "Nardo Gray",
+          "codice": "#757575"
+        },
+        {
+          "nome": "Charcoal",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Palette",
+      "file": "pdf/Bambu PLA Palette.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/8a89cc11c9ce4421a9593f9ee9580982/Bambu_PLA_Palette_Hex_Code.pdf",
+      "colori": [
+        {
+          "nome": "Magenta",
+          "codice": "#E24585"
+        },
+        {
+          "nome": "Cyan",
+          "codice": "#0090DA"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#FCE300"
+        },
+        {
+          "nome": "Key",
+          "codice": "#000000"
+        },
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Pure",
+      "file": "pdf/Bambu PLA Pure.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/cb680ec8a366477b9379e2fe1eba98e9/Bambu_PLA_Pure_Hex_Code.pdf",
+      "colori": [
+        {
+          "nome": "Pure White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Absolute Black",
+          "codice": "#000000"
+        },
+        {
+          "nome": "Baby Blue",
+          "codice": "#A4DBE8"
+        },
+        {
+          "nome": "Milky Pink",
+          "codice": "#F7CED7"
+        },
+        {
+          "nome": "Apricot",
+          "codice": "#FFB673"
+        }
+      ],
+      "nota": "Nel testo del PDF manca l'ultimo carattere di ogni scritta: nomi e codici sono completati dalla pagina del PDF, e il refuso \"Absolute Balck\" e' corretto."
+    },
+    {
+      "linea": "Bambu Lab PLA Silk+",
+      "file": "pdf/Bambu PLA Silk Plus.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/8aaeedf46e504db4afa2fc13cfbfae0a/PLA_Silk_Upgrade_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Silver",
+          "codice": "#C8C8C8"
+        },
+        {
+          "nome": "Champagne",
+          "codice": "#F3CFB2"
+        },
+        {
+          "nome": "Pink",
+          "codice": "#F7ADA6"
+        },
+        {
+          "nome": "Rose Gold",
+          "codice": "#BA9594"
+        },
+        {
+          "nome": "Candy Red",
+          "codice": "#D02727"
+        },
+        {
+          "nome": "Gold",
+          "codice": "#F4A925"
+        },
+        {
+          "nome": "Mint",
+          "codice": "#96DCB9"
+        },
+        {
+          "nome": "Candy Green",
+          "codice": "#018814"
+        },
+        {
+          "nome": "Baby Blue",
+          "codice": "#A8C6EE"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#008BDA"
+        },
+        {
+          "nome": "Purple",
+          "codice": "#8671CB"
+        },
+        {
+          "nome": "Titan Gray",
+          "codice": "#5F6367"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Sparkle",
+      "file": "pdf/Bambu PLA Sparkle.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/2a16583d2dc6404ea2ebcdf192441852/PLA_Sparkle_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Classic Gold Sparkle",
+          "codice": "#CEA629"
+        },
+        {
+          "nome": "Slate Gray Sparkle",
+          "codice": "#8E9089"
+        },
+        {
+          "nome": "Crimson Red Sparkle",
+          "codice": "#792B36"
+        },
+        {
+          "nome": "Royal Purple Sparkle",
+          "codice": "#483D8B"
+        },
+        {
+          "nome": "Alpine Green Sparkle",
+          "codice": "#3F5443"
+        },
+        {
+          "nome": "Onyx Black Sparkle",
+          "codice": "#2D2B28"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Tough+",
+      "file": "pdf/Bambu PLA Tough Plus.pdf",
+      "fonte": "https://store.bblcdn.com/s1/default/3d989ddc07694c378496784834947125/Bambu_PLA_Tough_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#AFB1AE"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        },
+        {
+          "nome": "Silver",
+          "codice": "#959698"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#F4D53F"
+        },
+        {
+          "nome": "Cyan",
+          "codice": "#009BD8"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#DC3A27"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Translucent",
+      "file": "pdf/Bambu PLA Translucent.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/2dbf9e91887b486693323dda23adcbb5/PLA_Translucent_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Teal",
+          "codice": "#009FA1"
+        },
+        {
+          "nome": "Light Jade",
+          "codice": "#96D8AF"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#0047BB"
+        },
+        {
+          "nome": "Mellow Yellow",
+          "codice": "#F5DBAB"
+        },
+        {
+          "nome": "Purple",
+          "codice": "#8344B0"
+        },
+        {
+          "nome": "Cherry Pink",
+          "codice": "#F5B6CD"
+        },
+        {
+          "nome": "Orange",
+          "codice": "#F74E02"
+        },
+        {
+          "nome": "Ice Blue",
+          "codice": "#B8CDE9"
+        },
+        {
+          "nome": "Red",
+          "codice": "#B50011"
+        },
+        {
+          "nome": "Lavender",
+          "codice": "#B8ACD6"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA Wood",
+      "file": "pdf/Bambu PLA Wood.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/312a35d5cdce4fc5a76692955b493a82/PLA_Wood_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White Oak",
+          "codice": "#D6CCA3"
+        },
+        {
+          "nome": "Ochre Yellow",
+          "codice": "#C98935"
+        },
+        {
+          "nome": "Clay Brown",
+          "codice": "#995F11"
+        },
+        {
+          "nome": "Classic Birch",
+          "codice": "#918669"
+        },
+        {
+          "nome": "Rosewood",
+          "codice": "#4C241C"
+        },
+        {
+          "nome": "Black Walnut",
+          "codice": "#4F3F24"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab PLA-CF",
+      "file": "pdf/Bambu PLA-CF.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/98df744e02e04d8599956b4fe8b19ff4/PLA-CF_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Burgundy Red",
+          "codice": "#951E23"
+        },
+        {
+          "nome": "Iris Purple",
+          "codice": "#69398E"
+        },
+        {
+          "nome": "Matcha Green",
+          "codice": "#5C9748"
+        },
+        {
+          "nome": "Jeans Blue",
+          "codice": "#6E88BC"
+        },
+        {
+          "nome": "Royal Blue",
+          "codice": "#2842AD"
+        },
+        {
+          "nome": "Lava Gray",
+          "codice": "#4D5054"
+        },
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab TPU 85A",
+      "file": "pdf/Bambu TPU 85A.pdf",
+      "fonte": "https://store-pre.bblcdn.com/s1/default/2373005ac1ae4f4b88416f8c7e23bbbe/Bambu_TPU_85A_Hex_Code.pdf",
+      "colori": [
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        },
+        {
+          "nome": "Light Cyan",
+          "codice": "#C3E2D6"
+        },
+        {
+          "nome": "Neon Orange",
+          "codice": "#F68B1B"
+        },
+        {
+          "nome": "Flesh",
+          "codice": "#F3CFB2"
+        },
+        {
+          "nome": "Lime Green",
+          "codice": "#CDEA80"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab TPU 90A",
+      "file": "pdf/Bambu TPU 90A.pdf",
+      "fonte": "https://store.bblcdn.com/s1/default/7e2c8bbbf2ff4c6996778bbb577bae13/Bambu_TPU_90A_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "Black",
+          "codice": "#000000"
+        },
+        {
+          "nome": "White",
+          "codice": "#FFFFEE"
+        },
+        {
+          "nome": "Grape Jelly",
+          "codice": "#D6ABFF"
+        },
+        {
+          "nome": "Crystal Blue",
+          "codice": "#7EB4E1"
+        },
+        {
+          "nome": "Cocoa Brown",
+          "codice": "#5C4738"
+        },
+        {
+          "nome": "Quicksilver",
+          "codice": "#9EA2A2"
+        },
+        {
+          "nome": "Blaze",
+          "codice": "#F1AAA8"
+        },
+        {
+          "nome": "Frozen",
+          "codice": "#FFFFFF"
+        }
+      ]
+    },
+    {
+      "linea": "Bambu Lab TPU 95A HF",
+      "file": "pdf/Bambu TPU 95A HF.pdf",
+      "fonte": "https://store.bblcdn.com/s7/default/6ec4738ccb144e8880cfec81a4cb6665/TPU_95A_HF_Hex_Code_Table.pdf",
+      "colori": [
+        {
+          "nome": "White",
+          "codice": "#FFFFFF"
+        },
+        {
+          "nome": "Gray",
+          "codice": "#898D8D"
+        },
+        {
+          "nome": "Yellow",
+          "codice": "#F3E600"
+        },
+        {
+          "nome": "Blue",
+          "codice": "#0072CE"
+        },
+        {
+          "nome": "Red",
+          "codice": "#C8102E"
+        },
+        {
+          "nome": "Black",
+          "codice": "#101820"
+        }
+      ]
+    }
+  ]
+}
