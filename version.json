@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.3",
-  "notes": "Magazzino corretto: modificando un preventivo Completato, il materiale si aggiorna. Tornando in Bozza viene restituito.",
+  "version": "3000.1.4",
+  "notes": "Multicolore: importando un file di Bambu Studio con piu colori, ogni colore ha il suo materiale, costo e magazzino. Tolta la P accanto al nome nella barra laterale.",
   "file": "index.html",
-  "sha256": "ccd395d98585259ee9ade9ae9ef8c49d3ac118bfe3d9a2d64480e1c3d3b8b60a",
+  "sha256": "5e69fb9954c6200bdd0b41308d77c104ad68163cc818005593ea4b7f3c24c8ac",
   "needShell": 2
 }
