@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.4.2",
-  "notes": "Multicolore: righe dei colori più chiare, con un riquadro grande del colore scelto e il blocco a tutta larghezza.",
+  "version": "3000.1.4.3",
+  "notes": "PDF multicolore più ordinato: nel preventivo una fila di pallini colorati, nell'ordine di lavorazione una riga per colore con i grammi.",
   "file": "index.html",
-  "sha256": "242ed56389eba1c50fe635f550115d032eb7531877127e514f58d7d97679dea3",
+  "sha256": "f8cc9e1ab5d3d4f2db8358b8c7597dc045d617d7082dddc9dd3692a5f4edf9e7",
   "needShell": 2
 }
