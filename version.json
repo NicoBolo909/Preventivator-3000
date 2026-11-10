@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.4",
-  "notes": "Multicolore: importando un file di Bambu Studio con piu colori, ogni colore ha il suo materiale, costo e magazzino. Tolta la P accanto al nome nella barra laterale.",
+  "version": "3000.1.4.1",
+  "notes": "Multicolore: nella scelta dei colori ora vedi pallino e magazzino di ogni materiale, e il colore del file quando manca il materiale.",
   "file": "index.html",
-  "sha256": "5e69fb9954c6200bdd0b41308d77c104ad68163cc818005593ea4b7f3c24c8ac",
+  "sha256": "94d2074896a845b60dc360ac53373260785241613bc3e57d40d2764361ed5aa3",
   "needShell": 2
 }
