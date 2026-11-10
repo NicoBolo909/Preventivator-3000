@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.4.3",
-  "notes": "PDF multicolore più ordinato: nel preventivo una fila di pallini colorati, nell'ordine di lavorazione una riga per colore con i grammi.",
+  "version": "3000.1.4.4",
+  "notes": "PDF multicolore: nel preventivo una riga per colore con pallino e materiale, come nell'ordine di lavorazione.",
   "file": "index.html",
-  "sha256": "f8cc9e1ab5d3d4f2db8358b8c7597dc045d617d7082dddc9dd3692a5f4edf9e7",
+  "sha256": "c91da37fb2af97594f69c18e131df7def950724d187e294893b47abed06afa4a",
   "needShell": 2
 }

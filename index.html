@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=3000.1.4.3-->
+<!--APP_VER=3000.1.4.4-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -1161,13 +1161,13 @@ async function printQ(id,work){
  for(const w of r.rows)if(w.img&&w.thm&&w.col)w.img=await tintImg(w.img,w.col);
  const PL=pdfLang();LOC=LOCS[PL];
  const dt=new Date(q.date+'T12:00:00').toLocaleDateString(LOC,{day:'2-digit',month:'long',year:'numeric'});
- const th=w=>w.img?`<img class=th src="${w.img}">`:'<div class=th></div>',col=(w,g)=>w.multi&&!g?'<span class=pc><b>Multicolore</b><span class=pcs>'+w.parts.map(x=>sw(x.col||'#808080')).join('')+'</span>'+((cn=>cn.length?'<span class=sb>'+esc(cn.join(', '))+'</span>':'')([...new Set(w.parts.map(x=>x.cn).filter(Boolean))]))+'</span>':w.multi?'<span class=pc>'+w.parts.map(x=>'<span>'+(x.col?sw(x.col)+' ':'')+esc(x.cn||x.mat)+(g?' · '+(Math.round(x.g*10)/10)+' g':'')+'</span>').join('')+'</span>':w.col?`${sw(w.col)} ${esc(w.cn||w.col)}`:'-';
+ const th=w=>w.img?`<img class=th src="${w.img}">`:'<div class=th></div>',col=(w,g)=>w.multi?'<span class=pc>'+w.parts.map(x=>'<span>'+(x.col?sw(x.col)+' ':'')+esc(x.mat)+(x.cn?' · '+esc(x.cn):'')+(g?' · '+(Math.round(x.g*10)/10)+' g':'')+'</span>').join('')+'</span>':w.col?`${sw(w.col)} ${esc(w.cn||w.col)}`:'-';
  let h=`<div class=ph><div><div class=bn>${esc(S.biz)}</div><div class=bi>${esc(S.info).replace(/\n/g,'<br>')}</div></div><div class=pr2><div class=pt>${work?'Ordine di lavorazione':'Preventivo'}</div><div class=pn>n. ${q.num}</div><div>${dt}</div>${q.due?`<div>Consegna: ${new Date(q.due+'T12:00:00').toLocaleDateString(LOC,{day:'2-digit',month:'long',year:'numeric'})}</div>`:''}</div></div>
  <div class=cl><div><small>Cliente</small><b>${esc(c.name||'-')}</b>${c.email?'<br>'+esc(c.email):''}${c.phone?'<br>'+esc(c.phone):''}</div>${q.title?`<div><small>Oggetto</small><b>${esc(q.title)}</b></div>`:''}</div>`;
  if(work){
   h+=`<table><tr><th><th>Oggetto<th class=t>Qtà<th>Materiale<th>Colore<th>Finitura<th>Stampante<th class=t>Peso<th class=t>Tempo<th class=t>Manuale</tr>`+r.rows.map(w=>`<tr><td>${th(w)}<td class=nm>${esc(w.name)}<td class=t>${w.n}<td>${w.multi?'<b>Multicolore</b>'+(w.mt?'<div class=sb>'+esc(w.mt)+'</div>':''):esc(w.mat)}<td>${col(w,1)}<td>${esc(w.fin||'-')}<td>${esc(w.pr)}<td class=t>${w.g} g<td class=t>${fmtH(w.h)}<td class=t>${w.min} min</tr>`).join('')+`</table><div class=nt>Totale materiale: ${(r.kg*1000).toFixed(0)} g · Tempo di stampa totale: ${fmtH(r.hrs)}</div>`;
  }else{
-  h+=`<table><tr><th><th>Articolo<th>Materiale<th>Colore<th>Finitura<th class=t>Qtà<th class=t>Prezzo<th class=t>Importo</tr>`+r.rows.map(w=>`<tr><td>${th(w)}<td class=nm>${esc(w.name)}<td>${esc(w.mat)}${w.mt?`<div class=sb>${esc(w.mt)}</div>`:''}<td>${col(w)}<td>${esc(w.fin||'-')}<td class=t>${w.n}<td class=t>${eur(w.unit)}<td class=t>${eur(w.tot)}</tr>`).join('')
+  h+=`<table><tr><th><th>Articolo<th>Materiale<th>Colore<th>Finitura<th class=t>Qtà<th class=t>Prezzo<th class=t>Importo</tr>`+r.rows.map(w=>`<tr><td>${th(w)}<td class=nm>${esc(w.name)}<td>${w.multi?'<b>Multicolore</b>':esc(w.mat)}${w.mt?`<div class=sb>${esc(w.mt)}</div>`:''}<td>${col(w)}<td>${esc(w.fin||'-')}<td class=t>${w.n}<td class=t>${eur(w.unit)}<td class=t>${eur(w.tot)}</tr>`).join('')
   +(q.extras||[]).map(id=>find('extras',id)).filter(Boolean).map(x=>`<tr><td><td class=nm colspan=4>${esc(x.name)}<td class=t>1<td class=t>${eur(x.price)}<td class=t>${eur(x.price)}</tr>`).join('')
   +`</table><div class=tt>${r.disc||r.ex?`<div><span>Subtotale</span><span>${eur(r.sub)}</span></div>`:''}${r.disc?`<div><span>Sconto ${q.disc}%</span><span>-${eur(r.disc)}</span></div>`:''}${r.ship?`<div><span>Spedizione</span><span>${eur(r.ship)}</span></div>`:''}${S.useVat?`<div><span>Imponibile</span><span>${eur(r.net)}</span></div><div><span>IVA ${S.vat}%</span><span>${eur(r.vat)}</span></div>`:''}<div class=g><span>Totale</span><span>${eur(r.total)}</span></div>${r.dep>0?`<div><span>Acconto richiesto</span><span>${eur(r.dep)}</span></div><div><span>Saldo</span><span>${eur(r.total-r.dep)}</span></div>`:''}</div>`;
  }
