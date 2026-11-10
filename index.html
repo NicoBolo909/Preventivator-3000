@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!--APP_VER=3000.1.4.1-->
+<!--APP_VER=3000.1.4.2-->
 <html lang="it"><head><meta charset="utf-8"><title>Preventivator 3000</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
@@ -293,7 +293,13 @@ dialog label{margin-bottom:12px}
 #orm{border-radius:18px;box-shadow:var(--sh2)}#orm canvas{border-radius:12px}
 #otat{border-radius:14px!important;box-shadow:var(--sh2)!important;border-left:1px solid var(--bd)!important}
 /* multicolore */
-.fls{display:grid;gap:6px;margin-top:5px}.flr{display:grid;grid-template-columns:minmax(0,1fr) 90px 14px 32px;gap:8px;align-items:center}.flr .cs{margin-top:0}.flr input{margin:0}.flr.need .cs>button{border-color:#d97884;background:rgba(217,120,132,.08)}.flr .cs>button .sw{flex:none}
+.fls{display:grid;gap:6px;margin-top:5px}.it .wfull{grid-column:1/-1}.fsw{width:30px;height:30px;border-radius:8px;border:1px solid rgba(128,128,128,.45);box-shadow:inset 0 0 0 2px rgba(255,255,255,.08)}.fsw.file{border:2px dashed #d97884}
+.flr{display:grid;grid-template-columns:30px minmax(0,1fr) 96px 14px 32px;gap:10px;align-items:center;max-width:760px}.flr .cs{margin-top:0;min-width:0}.flr input{margin:0}.flr.need .cs>button{border-color:#d97884;background:rgba(217,120,132,.08)}
+.cs>button>span:first-child,.csl>div>span:first-child{flex:none}
+.flr .cs>button{min-width:0;gap:9px}.flr .cs>button>span:first-child{display:none!important}
+.fls{container-type:inline-size}.flr .csl{min-width:min(420px,calc(100vw - 40px))}.flr .csl>div>span:nth-child(2){white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}@container (max-width:560px){.flr .cs>button .mb+span{display:none}}
+.flr .cs>button>span:nth-child(2){min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.flr .cs>button .mb{display:none}.flr .cs>button .mb+span{min-width:0!important}
 .lnk{background:none!important;border:0!important;color:var(--ac);padding:4px 0!important;min-height:0!important;margin-top:4px;font-weight:600;box-shadow:none!important}.lnk:hover{text-decoration:underline}
 /* libreria colori */
 .lcp{margin:-2px 0 12px}.lcg{display:grid;grid-template-columns:repeat(auto-fill,minmax(30px,1fr));gap:6px;margin-top:8px}
@@ -797,11 +803,11 @@ function hexDist(a,b){const p=h=>{const m=/^#?([0-9a-f]{6})/i.exec(h||'');if(!m)
 function filSel(n,k,x){const m=find('materials',x.matId),fc=/^#[0-9a-f]{6}$/i.test(x.color||'')?x.color:'';
  const list=db.materials.slice().sort((a,b)=>fc?hexDist(a.color,fc)-hexDist(b.color,fc):0);
  const row=y=>sw(y.color||'#808080')+'<span style="flex:1">'+esc(y.name)+(y.colorName?' <span class=mu>· '+esc(y.colorName)+'</span>':'')+'</span>'+mbar(y);
- const head=m?row(m):(fc?sw(fc)+'<span style="flex:1">'+esc(tr('Scegli materiale'))+' <span class=mu>· '+esc(tr('colore nel file'))+' '+esc(fc.toUpperCase())+'</span></span>':'<span style="flex:1">'+esc(tr('Scegli materiale'))+'</span>');
+ const head=m?row(m):'<span></span><span style="flex:1">'+esc(tr('Scegli materiale'))+(fc?' <span class=mu>· '+esc(tr('colore nel file'))+' '+esc(fc.toUpperCase())+'</span>':'')+'</span>';
  return '<div class=cs data-nt><button type=button onclick="cs(this)">'+head+'</button><div class=csl hidden>'+(list.map(y=>'<div onclick="filPick('+n+','+k+',\''+y.id+'\')">'+row(y)+'</div>').join('')||'<div class=mu>'+esc(tr('Nessun materiale'))+'</div>')+'</div></div>'}
 function filList(i,n){
- return '<div class="lb w2">'+esc(tr('Colori'))+' <span class=mu>· '+i.fils.length+'</span><div class=fls>'+i.fils.map((x,k)=>{const m=find('materials',x.matId);
-  return '<div class="flr'+(m?'':' need')+'">'+filSel(n,k,x)+'<input type=number step=any min=0 value="'+(+x.g||0)+'" oninput="filSet('+n+','+k+',\'g\',this.value)" aria-label="g"><span class=mu>g</span><button type=button class=ib title="'+esc(tr('Rimuovi colore'))+'" onclick="filDel('+n+','+k+')">✕</button></div>'}).join('')+'</div><button type=button class=lnk onclick="filAdd('+n+')">+ '+esc(tr('Aggiungi colore'))+'</button></div>'}
+ return '<div class="lb wfull">'+esc(tr('Colori'))+' <span class=mu>· '+i.fils.length+'</span><div class=fls>'+i.fils.map((x,k)=>{const m=find('materials',x.matId),fc=/^#[0-9a-f]{6}$/i.test(x.color||'')?x.color:'',c=m&&m.color||fc;
+  return '<div class="flr'+(m?'':' need')+'"><span class="fsw'+(m?'':' file')+'" style="background:'+esc(c||'transparent')+'" title="'+esc(m?(m.colorName||m.name)+(m.color?' · '+m.color:''):tr('colore nel file')+' '+fc)+'"></span>'+filSel(n,k,x)+'<input type=number step=any min=0 value="'+(+x.g||0)+'" oninput="filSet('+n+','+k+',\'g\',this.value)" aria-label="g"><span class=mu>g</span><button type=button class=ib title="'+esc(tr('Rimuovi colore'))+'" onclick="filDel('+n+','+k+')">✕</button></div>'}).join('')+'</div><button type=button class=lnk onclick="filAdd('+n+')">+ '+esc(tr('Aggiungi colore'))+'</button></div>'}
 function cs(b){const l=b.nextElementSibling,w=l.hidden;document.querySelectorAll('.csl').forEach(x=>x.hidden=true);l.hidden=!w;}
 function pickM(n,id){Q.items[n].matId=id;qEdit();}
 document.addEventListener('click',e=>{if(!e.target.closest('.cs'))document.querySelectorAll('.csl').forEach(x=>x.hidden=true)});

@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.4.1",
-  "notes": "Multicolore: nella scelta dei colori ora vedi pallino e magazzino di ogni materiale, e il colore del file quando manca il materiale.",
+  "version": "3000.1.4.2",
+  "notes": "Multicolore: righe dei colori più chiare, con un riquadro grande del colore scelto e il blocco a tutta larghezza.",
   "file": "index.html",
-  "sha256": "94d2074896a845b60dc360ac53373260785241613bc3e57d40d2764361ed5aa3",
+  "sha256": "242ed56389eba1c50fe635f550115d032eb7531877127e514f58d7d97679dea3",
   "needShell": 2
 }
