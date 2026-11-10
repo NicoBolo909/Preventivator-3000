@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.4.4",
-  "notes": "PDF multicolore: nel preventivo una riga per colore con pallino e materiale, come nell'ordine di lavorazione.",
+  "version": "3000.1.5.0",
+  "notes": "V1.5: legge i file di OrcaSlicer, PrusaSlicer (anche .bgcode), Cura (anche .ufp), Simplify3D e ideaMaker. Per lo slicing automatico con OrcaSlicer o PrusaSlicer installa il nuovo Setup V1.5.",
   "file": "index.html",
-  "sha256": "c91da37fb2af97594f69c18e131df7def950724d187e294893b47abed06afa4a",
+  "sha256": "ede0e94ee0f98ba1ea3c02ffda74356c8182c009f53355404c918df2c6fb75ed",
   "needShell": 2
 }
