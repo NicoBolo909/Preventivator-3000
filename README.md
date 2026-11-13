@@ -53,6 +53,8 @@ Importa una tabella colori in PDF, controlla l'anteprima e aggiungila alla libre
 
 **Windows:** scarica `Preventivator3000-Setup` dalle [Release](../../releases/latest) e aprilo. Se Windows mostra "PC protetto da Windows", scegli **Ulteriori informazioni** → **Esegui comunque**: l'installer non ha ancora una firma digitale.
 
+**Mac:** scarica dalle [Release](../../releases/latest) il file `Mac-AppleSilicon.dmg` per i Mac con chip M1, M2, M3 o successivi, oppure `Mac-Intel.dmg` per i Mac con processore Intel. Aprilo e trascina Preventivator 3000 nella cartella Applicazioni. Al primo avvio, se macOS blocca l'app, apri **Impostazioni di Sistema → Privacy e sicurezza** e scegli **Apri comunque**: anche qui manca ancora la firma digitale.
+
 Per lo slicing automatico serve uno slicer installato sullo stesso computer: [Bambu Studio](https://bambulab.com/it/download/studio), [OrcaSlicer](https://github.com/SoftFever/OrcaSlicer/releases) oppure [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/) 2.6 o successivo. Lo scegli in **Impostazioni → Slicer**.
 
 ## Licenza

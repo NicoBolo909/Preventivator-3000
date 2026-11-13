@@ -53,6 +53,8 @@ Import a color table from a PDF, check the preview and add it to the library. In
 
 **Windows:** download `Preventivator3000-Setup` from the [latest release](../../releases/latest) and open it. If Windows shows "Windows protected your PC", choose **More info** → **Run anyway**: the installer does not have a digital signature yet.
 
+**Mac:** from the [latest release](../../releases/latest), download `Mac-AppleSilicon.dmg` for Macs with an M1, M2, M3 or later chip, or `Mac-Intel.dmg` for Macs with an Intel processor. Open it and drag Preventivator 3000 to the Applications folder. If macOS blocks the app the first time, open **System Settings → Privacy & Security** and choose **Open Anyway**: the app does not have a digital signature yet either.
+
 To slice from the app, a slicer must be installed on the same computer: [Bambu Studio](https://bambulab.com/en/download/studio), [OrcaSlicer](https://github.com/SoftFever/OrcaSlicer/releases) or [PrusaSlicer](https://www.prusa3d.com/page/prusaslicer_424/) 2.6 or later. Choose it in **Settings → Slicer**.
 
 ## License
