@@ -1,7 +1,7 @@
 {
-  "version": "3000.1.5.0",
-  "notes": "V1.5: legge i file di OrcaSlicer, PrusaSlicer (anche .bgcode), Cura (anche .ufp), Simplify3D e ideaMaker. Per lo slicing automatico con OrcaSlicer o PrusaSlicer installa il nuovo Setup V1.5.",
+  "version": "3000.1.6.0",
+  "notes": "V1.6: Impostazioni rinnovate, divise in schede, con esempio di prezzo dal vivo e anteprima dell'intestazione del PDF.",
   "file": "index.html",
-  "sha256": "ede0e94ee0f98ba1ea3c02ffda74356c8182c009f53355404c918df2c6fb75ed",
+  "sha256": "1dfd8aa082225ea7a7e9f966c77089eb12a47958e480815445d241add60b5b44",
   "needShell": 2
 }
